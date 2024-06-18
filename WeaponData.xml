@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CWeaponLegacy id="90mmCannons">
+        <MinScanRange value="7"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="90mmCannonsFake">
+        <MinScanRange value="7"/>
+        <Period value="90"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="AcidSpines">
+        <MinScanRange value="7"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Adept">
+        <Period value="1.87"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BroodlingEscort">
+        <Range value="8"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="BroodlingStrike">
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="C10CanisterRifle">
+        <MinScanRange value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CycloneLockOnDummy">
+        <MinScanRange value="5"/>
+        <Range value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="DisruptionBeam">
+        <MinScanRange value="5"/>
+        <Cost>
+            <Cooldown Location="Abil" TimeUse="0"/>
+        </Cost>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="GuassRifle">
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HighTemplarWeapon">
+        <MinScanRange value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="HydraliskMelee">
+        <Period value="0.83"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfernalFlameThrower">
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="InfestedGuassRifle">
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="JavelinMissileLaunchers">
+        <MinScanRange value="10"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="KaiserBlades">
+        <RangeSlop value="1.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LanceMissileLaunchers">
+        <Range value="10"/>
+        <Period value="2"/>
+        <!--Effect value="LanceMissileLaunchersLaunchMissile"/-->
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LanzerTorpedoes"/>
+    <CWeaponLegacy id="LiberatorAGMissileLaunchers" parent="LiberatorMissileLaunchers">
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <Options index="LinkedCooldown" value="0"/>
+        <Options index="RequireEnabledAttackAbil" value="0"/>
+        <Options index="IgnoreAttackPriority" value="1"/>
+        <Range value="7"/>
+        <Arc value="90"/>
+        <LegacyOptions index="FaceTargetWhileInCooldown" value="0"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LiberatorAGWeapon">
+        <Options index="LinkedCooldown" value="0"/>
+        <Period value="1.8"/>
+        <Backswing value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LocustMP">
+        <Period value="0.8"/>
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LocustMPAerial" parent="LocustMP">
+        <Options index="Disabled" value="1"/>
+        <Options index="Hidden" value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LocustMPFlyingSwoopWeapon">
+        <MinScanRange value="5"/>
+        <Range value="4"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LocustMPMelee">
+        <Period value="0.8"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="LurkerMP">
+        <Range value="7"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MothershipCoreWeapon">
+        <Range value="13"/>
+        <Period value="1.25"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="NeedleSpines">
+        <MinScanRange value="6"/>
+        <Range value="6"/>
+        <Period value="0.83"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Oracle">
+        <Cost>
+            <Cooldown TimeUse="0"/>
+        </Cost>
+        <RandomDelayMin value="-0.0625"/>
+        <RandomDelayMax value="0.125"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="P38ScytheGuassPistol">
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParasiteSpore">
+        <Period value="1.65"/>
+        <DamagePoint value="0.75"/>
+        <RangeSlop value="3"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ParticleDisruptors">
+        <MinScanRange value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PhaseDisruptors">
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="PunisherGrenades">
+        <MinScanRange value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="RavagerWeapon">
+        <MinScanRange value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Talons">
+        <MinScanRange value="3.5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Tempest">
+        <Range value="13"/>
+        <Effect value="TempestAttackAirSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TempestGround">
+        <Range value="13"/>
+        <MinScanRange value="5"/>
+        <Effect value="TempestAttackGroundSet"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ThermalLances">
+        <MinScanRange value="5"/>
+        <Period value="1.65"/>
+        <DamagePoint value="0.167"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="1"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="1"/>
+        <AcquirePrioritization value="ByDistance"/>
+        <RangeSlop value="1"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="ThorsHammer">
+        <MinScanRange value="7"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TwinGatlingCannon">
+        <MinScanRange value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="TyphoonMissilePod">
+        <MinScanRange value="5"/>
+        <Period value="0.14"/>
+        <RandomDelayMin value="0"/>
+        <RandomDelayMax value="0"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="MothershipWeaponPurify" parent="MothershipCoreWeapon">
+        <Name value="Weapon/Name/MothershipWeaponPurify"/>
+        <Options index="Disabled" value="1"/>
+        <Options index="OnlyFireWhileInAttackOrder" value="0"/>
+        <Options index="OnlyFireAtAttackOrderTarget" value="0"/>
+        <MinimumRange value="7"/>
+        <AllowedMovement value="Moving"/>
+        <DisplayName value="Weapon/Name/MothershipWeaponPurify"/>
+        <MinScanRange value="5"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="CCCsPrismaticBeam">
+        <EditorCategories value="Race:Protoss"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-airweaponslevel0.dds"/>
+        <DisplayEffect value="PrismaticBeamMUx1"/>
+        <TargetFilters value="Visible;Missile,Stasis,Dead,Hidden,Invulnerable"/>
+        <Period value="0.5"/>
+        <AllowedMovement value="Moving"/>
+        <ArcSlop value="39.9902"/>
+        <Range value="6"/>
+        <Effect value="VoidRayStartingActorHooker"/>
+        <LegacyOptions index="CanRetargetWhileChanneling" value="1"/>
+        <TeleportResetRange value="0"/>
+        <RangeSlop value="2"/>
+    </CWeaponLegacy>
+</Catalog>

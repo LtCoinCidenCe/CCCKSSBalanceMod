@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CValidatorUnitCompareChargeUsed id="CycloneAmmoEmpty">
+        <Compare value="GE"/>
+        <ChargeLink value="Abil/CycloneReload"/>
+        <Location value="Unit"/>
+        <Ability value="CycloneReload"/>
+        <Value value="80"/>
+    </CValidatorUnitCompareChargeUsed>
+    <CValidatorUnitCompareChargeUsed id="CycloneAmmoNotFull">
+        <ResultFailed value="CantHoldAnyMoreAmmo"/>
+        <Compare value="GT"/>
+        <ChargeLink value="Abil/CycloneReload"/>
+        <Location value="Unit"/>
+        <Ability value="CycloneReload"/>
+    </CValidatorUnitCompareChargeUsed>
+    <CValidatorUnitCompareBehaviorCount id="HighTemplarFeedbackAutoCastCooldown">
+        <WhichUnit Value="Caster"/>
+        <ResultNoUnit value="Cooldown"/>
+        <Behavior value="HighTemplarFeedbackAutoCastCooldown"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitOrderQueue id="LiberatorMorphing">
+        <AbilLink value="LiberatorMorphtoAG"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitOrderQueue id="MedivacIsHealing">
+        <AbilLink value="MedivacDoubleBeamHeal"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareBehaviorCount id="MedivacHealSecondBeamIdle">
+        <WhichUnit Value="Caster"/>
+        <Behavior value="MedivacHealSecondBeamBusy"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="MedivacHealingPrimaryTarget">
+        <WhichUnit Value="Source"/>
+        <Behavior value="MedivacHealSecondBeam"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorLocationCompareRange id="DistanceLessThan4">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LT"/>
+        <Range value="4"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorUnitCompareOrderCount id="RavenChargeApproaching">
+        <AbilLink value="RavenChargeAttack"/>
+        <Value value="1"/>
+    </CValidatorUnitCompareOrderCount>
+    <CValidatorLocationCompareRange id="RavenChargeCasterNearTarget">
+        <WhichLocation Value="TargetUnit"/>
+        <Compare value="LT"/>
+        <Range value="15"/>
+    </CValidatorLocationCompareRange>
+    <CValidatorCombine id="RavenChargePeriodicValidator">
+        <Type value="And"/>
+        <CombineArray value="RavenChargeCasterNearTarget"/>
+        <CombineArray value="RavenChargeApproaching"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="TargetNotBeingHealed">
+        <Behavior value="MedivacTargetBeingHealed"/>
+        <ExcludeCasterUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="NotMaxHP">
+        <ResultFailed value="TooMuchLife"/>
+        <Compare value="LT"/>
+        <Value value="1"/>
+        <Type value="Fraction"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitOrderQueue id="NotStopping">
+        <AbilLink value="stop"/>
+        <Find value="0"/>
+    </CValidatorUnitOrderQueue>
+    <CValidatorUnitCompareBehaviorCount id="IsMSCStrategicWarpOut2">
+        <Behavior value="MothershipcoreStrategicWarpOut"/>
+        <Compare value="GT"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="IsBeingWarpedWhoever">
+        <CombineArray value="IsNexusMassRecallWarpingOut"/>
+        <CombineArray value="IsMothershipStrategicWarpOut"/>
+        <CombineArray value="IsNexusMassRecallRecalled"/>
+        <CombineArray value="IsMSCStrategicWarpOut2"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="IsMSCStrategicWarpOutEffect">
+        <Behavior value="MothershipcoreStrategicWarpOut"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareVital id="TargetEnergyGE50">
+        <Compare value="GE"/>
+        <Value value="50"/>
+        <Vital value="Energy"/>
+    </CValidatorUnitCompareVital>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergy0">
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergy12">
+        <Value value="12"/>
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergy6">
+        <Value value="6"/>
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="VoidRayEnergyBreakthroughPoint">
+        <CombineArray value="VoidRayEnergy6"/>
+        <CombineArray value="VoidRayEnergy12"/>
+    </CValidatorCombine>
+    <CValidatorCombine id="VoidRayEnergyBreakthroughPointNegative">
+        <CombineArray value="VoidRayEnergyBreakthroughPoint"/>
+        <Negate value="1"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergyEqualorHigherThan12">
+        <Compare value="GE"/>
+        <Value value="12"/>
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergyEqualorHigherThan6">
+        <Compare value="GE"/>
+        <Value value="6"/>
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergyHigherThan0">
+        <Compare value="GT"/>
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergyLessThan12">
+        <Compare value="LT"/>
+        <Value value="12"/>
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="VoidRayEnergyLessThan6">
+        <Compare value="LT"/>
+        <Value value="6"/>
+        <Behavior value="VoidRayEnergyCounter"/>
+        <WhichUnit Value="Caster"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorCombine id="VoidRayEnergyPhase2">
+        <Type value="And"/>
+        <CombineArray value="VoidRayEnergyEqualorHigherThan6"/>
+        <CombineArray value="VoidRayEnergyLessThan12"/>
+    </CValidatorCombine>
+    <CValidatorUnitCompareBehaviorCount id="mothershipPurifyActive">
+        <Behavior value="mothershipPurify"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsChronoBoosted">
+        <ResultFailed value="Error,Error/AlreadyChronoBoosted"/>
+        <Compare value="GT"/>
+        <Behavior value="ChronoBoostEnergyCost"/>
+    </CValidatorUnitCompareBehaviorCount>
+    <CValidatorUnitCompareBehaviorCount id="IsNotChronoBoosted2">
+        <ResultFailed value="Error,Error/NotChronoBoosted"/>
+        <Behavior value="ChronoBoostEnergyCost"/>
+    </CValidatorUnitCompareBehaviorCount>
+</Catalog>

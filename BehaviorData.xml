@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CBehaviorBuff id="AutoTurretTimedLife">
+        <Duration value="15"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CycloneReload">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-upgrade-terran-magfieldaccelerator.dds"/>
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <DisplayDuration index="Self" value="1"/>
+        <DisplayDuration index="Ally" value="1"/>
+        <RemoveValidatorArray value="NotHaveScramblerMissileBehavior"/>
+        <Duration value="10"/>
+        <ExpireEffect value="CycloneAddAmmo"/>
+        <Modification>
+            <AbilClassDisableArray index="CAbilEffectInstant" value="1"/>
+            <WeaponArray Link="CycloneLockOnDummy"/>
+            <WeaponDisableArray value="TyphoonMissilePod"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="HighTemplarFeedbackAutoCastCooldown">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-feedback-color.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+    </CBehaviorBuff>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals">
+        <Capacity value="1600"/>
+        <Contents value="1600"/>
+        <DepletionThreshold value="750"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="HighYieldMineralFieldMinerals750">
+        <Capacity value="1400"/>
+        <Contents value="1400"/>
+        <DepletionThreshold value="750"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="LiberatorStartedMorphingtoDefenderMode">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="LiberatorMorphing"/>
+        <Modification>
+            <WeaponDisableArray value="LiberatorAGMissileLaunchers"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedivacTargetBeingHealed">
+        <EditorCategories value="AbilityorEffectType:Units,Race:Terran"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedivacHealSecondBeam">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InitialEffect value="MedivacHealSecondBeamSearch"/>
+        <PeriodicEffect value="MedivacHealSecondBeamSearch"/>
+        <BuffFlags index="Channeling" value="1"/>
+        <Period value="0.125"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MedivacHealSecondBeamBusy">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="AdeptDeathCheck">
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BarrierDamageResponse">
+        <DamageResponse Handled="DamageTakenBarrieAutocastAB">
+            <Cost>
+                <Cooldown TimeUse="0"/>
+            </Cost>
+        </DamageResponse>
+        <Cost>
+            <Cooldown TimeUse="0"/>
+        </Cost>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlindingCloud">
+        <Duration value="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="BlindingCloudStructure">
+        <Duration value="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ChronoBoostEnergyCost">
+        <Duration value="20"/>
+        <FinalEffect value="ChronoBoostRemoveHiddenBehavior"/>
+        <DisplayDuration index="Self" value="0"/>
+        <DisplayDuration index="Ally" value="0"/>
+        <DisplayDuration index="Neutral" value="0"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ChronoBoostExtended" parent="ChronoBoostEnergyCost">
+        <Cost>
+            <Charge Link="Behavior/ChronoBoostExtended"/>
+            <Cooldown Link="Behavior/ChronoBoostExtended"/>
+        </Cost>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/ChronoBoostExtended"/>
+                <Cooldown Link="Behavior/ChronoBoostExtended"/>
+            </Cost>
+        </DamageResponse>
+        <BuffFlags index="Extend" value="1"/>
+        <FinalEffect value=""/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="ChronoBoostHiddenStack">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <MaxStackCount value="65535"/>
+        <FinalEffect value="ChronoBoostDelay"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CorrosiveBilePrecursorTimedSuicide">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Zerg,AbilityorEffectType:Units"/>
+        <Duration value="7"/>
+        <FinalEffect value="KillSourcePrecursor"/>
+        <Modification SightMaximum="0">
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <ModifyFlags index="DisableWeapons" value="1"/>
+            <ModifyFlags index="SuppressMoving" value="1"/>
+            <StateFlags index="Invulnerable" value="1"/>
+            <StateFlags index="SuppressFoodUsed" value="1"/>
+            <StateFlags index="NoDraw" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <StateFlags index="Unselectable" value="1"/>
+            <StateFlags index="Untargetable" value="1"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DarkTemplarBlinkAttackDelay">
+        <Modification MoveSpeedMultiplier="0.01"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Detector13" parent="Detector">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="1"/>
+        <InfoIcon value="Assets\Textures\btn-status-detector.dds"/>
+        <Modification Detect="13"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="DetectorLaterToBe13" parent="Detector11">
+        <Name value="Behavior/Name/DetectorLaterToBe13"/>
+        <Tooltip value="Behavior/Tooltip/DetectorLaterToBe13"/>
+        <Cost>
+            <Charge Link="Behavior/DetectorLaterToBe13"/>
+            <Cooldown Link="Behavior/DetectorLaterToBe13"/>
+        </Cost>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <DamageResponse>
+            <Cost>
+                <Charge Link="Behavior/DetectorLaterToBe13"/>
+                <Cooldown Link="Behavior/DetectorLaterToBe13"/>
+            </Cost>
+        </DamageResponse>
+    </CBehaviorBuff>
+    <!--The weapon needs to keep in line with the ability range (7), in case of A-move, to catch the same target as the ability locks on. Further scan range works for chasing the target when the enemy is alone.-->
+    <CBehaviorBuff id="LockOnDummyWeapon"/>
+    <CBehaviorResource id="MineralFieldMinerals">
+        <Capacity value="1600"/>
+        <Contents value="1600"/>
+        <DepletionThreshold value="750"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMinerals750">
+        <Capacity value="1400"/>
+        <Contents value="1400"/>
+        <DepletionThreshold value="750"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="MineralFieldMineralsOpaque900">
+        <Capacity value="1400"/>
+        <Contents value="1400"/>
+        <DepletionThreshold value="750"/>
+    </CBehaviorResource>
+    <CBehaviorCreepSource id="NydusCreepGrowth"/>
+    <CBehaviorBuff id="NydusWormArmor">
+        <Alignment value="Positive"/>
+        <InfoFlags index="Hidden" value="0"/>
+        <InfoIcon value="Assets\Textures\btn-ability-zerg-armoraura.dds"/>
+        <Modification>
+            <LifeArmorBonus value="0"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="CloakField">
+        <DisableValidatorArray index="0" value="mothershipPurifyActive"/>
+    </CBehaviorBuff>
+    <CBehaviorPowerSource id="FastEnablerPowerSourceNexus">
+        <Radius value="10"/>
+    </CBehaviorPowerSource>
+    <CBehaviorBuff id="MULETimedLife">
+        <Duration value="40"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipStrategicWarpOut">
+        <Duration value="3"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="MothershipcoreStrategicWarpOut">
+        <InfoFlags index="Hidden" value="1"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <RemoveValidatorArray value="CasterHasNexusMassRecallCasting"/>
+        <Duration value="3"/>
+        <Period value="4"/>
+        <PeriodicEffect value="NexusMassRecallPreTeleportDummy"/>
+        <FinalEffect value="NexusMassRecallCastingRB"/>
+        <ExpireEffect value="MothershipcoreStrategicRecallSet"/>
+        <Modification>
+            <ModifyFlags index="DisableAbils" value="1"/>
+            <StateFlags index="SuppressAttack" value="1"/>
+            <StateFlags index="SuppressPassenger" value="1"/>
+            <StateFlags index="Uncommandable" value="1"/>
+            <AbilClassDisableArray index="CAbilAttack" value="1"/>
+            <AbilClassDisableArray index="CAbilMove" value="1"/>
+            <AbilLinkEnableArray value="VolatileBurstBuilding"/>
+            <AbilLinkEnableArray value="GhostCloak"/>
+            <AbilLinkEnableArray value="BansheeCloak"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NexusMassRecallTargetPhased">
+        <RemoveValidatorArray index="0" value="IsBeingWarpedWhoever"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="NexusMassRecallWarpOut">
+        <Duration value="2"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="Purify">
+        <Duration value="30"/>
+        <InitialEffect value=""/>
+        <FinalEffect value=""/>
+        <EditorCategories value="AbilityorEffectType:Units,Race:Protoss"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenChargeInitialSelf">
+        <EditorCategories value="Race:Terran,AbilityorEffectType:Units"/>
+        <Duration value="8"/>
+        <Modification MoveSpeedBonus="2.75" DecelerationBonus="50"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="RavenShredderMissileArmorReductionUISubtruct">
+        <DisplayDuration index="Self" value="0"/>
+        <DisplayDuration index="Ally" value="0"/>
+        <DisplayDuration index="Neutral" value="0"/>
+        <DisplayDuration index="Enemy" value="0"/>
+        <Modification ShieldArmorBonus="-3">
+            <LifeArmorBonus value="-3"/>
+        </Modification>
+    </CBehaviorBuff>
+    <CBehaviorResource id="RawRichVespeneGeyserGas">
+        <Capacity value="2500"/>
+        <Contents value="2500"/>
+    </CBehaviorResource>
+    <CBehaviorResource id="RawVespeneGeyserGas">
+        <Capacity value="2500"/>
+        <Contents value="2500"/>
+    </CBehaviorResource>
+    <CBehaviorBuff id="SensorTowerRadar"/>
+    <CBehaviorSpawn id="SpawnLarva">
+        <InfoArray index="1" MaxCount="20"/>
+        <Limit value="20"/>
+    </CBehaviorSpawn>
+    <CBehaviorBuff id="TemporalFieldGreen">
+        <Alignment value="Negative"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-timewarp.dds"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="0.125"/>
+        <Modification MoveSpeedMultiplier="0.5"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidRayChargePhase2">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidRayChargePhase3">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidRayEnergyCounter">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Duration value="5"/>
+        <BuffFlags index="RefreshStack" value="1"/>
+        <MaxStackCount value="15"/>
+        <InitialEffect value="VoidRayCounterProcessSwitch"/>
+        <RefreshEffect value="VoidRayCounterProcessSwitch"/>
+        <InfoFlags index="Hidden" value="1"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="VoidRayPhase3Activator">
+        <Alignment value="Positive"/>
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <TimeScaleSource Value="Global"/>
+        <Duration value="25.5"/>
+        <Period value="1"/>
+        <InitialEffect value="VoidRayPhase3ActivatorInitialSet"/>
+        <PeriodicEffect value="VoidRayPhase3ActivatorPeriodicSet"/>
+    </CBehaviorBuff>
+    <CBehaviorBuff id="mothershipPurify">
+        <EditorCategories value="Race:Protoss,AbilityorEffectType:Units"/>
+        <Modification>
+            <VitalRegenArray index="Energy" value="-1.4765"/>
+            <WeaponEnableArray value="MothershipWeaponPurify"/>
+            <WeaponDisableArray value="MothershipBeam"/>
+        </Modification>
+        <RemoveValidatorArray value="CanSpendEnergy"/>
+        <RemoveValidatorArray value="hasEnergy"/>
+        <Alignment value="Positive"/>
+        <Name value="Behavior/Name/Purify"/>
+        <InfoIcon value="Assets\Textures\btn-ability-protoss-purify.dds"/>
+    </CBehaviorBuff>
+</Catalog>

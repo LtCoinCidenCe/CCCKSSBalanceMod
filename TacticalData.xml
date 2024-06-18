@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CTacticalOrder id="LurkerMPAT">
+        <Abil value="BurrowLurkerMPDown2"/>
+        <Validator value="TacticalBurrowLurkerMPDown"/>
+    </CTacticalOrder>
+    <CTacticalSet id="LurkerMPSet2">
+        <Array value="LurkerMP"/>
+        <Array value="LurkerMPAT"/>
+    </CTacticalSet>
+</Catalog>

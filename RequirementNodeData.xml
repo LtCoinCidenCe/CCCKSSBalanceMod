@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirementCountBehavior id="CountBehaviorRavenChargeInitialSelfCompleteOnlyAtUnit">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Tooltip value="RequirementNode/Tooltip/##id##"/>
+        <Count Link="RavenChargeInitialSelf" State="CompleteOnlyAtUnit"/>
+    </CRequirementCountBehavior>
+    <CRequirementCountUnit id="CountUnitHiveQueuedOrBetterTechTreeCheat">
+        <Count Link="Hive" State="QueuedOrBetter"/>
+    </CRequirementCountUnit>
+    <CRequirementCountUpgrade id="CountUpgradeAerialHomeostasisCompleteOnly2704428533">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AerialHomeostasis" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAerialHomeostasisQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AerialHomeostasis" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeAntiCorrosionContainerQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="AntiCorrosionContainer" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeDiggingClawsCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="DiggingClaws" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeHatcheryCapacityQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="HatcheryCapacity" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeLurkerRangeQueuedOrBetterTechTreeCheat"/>
+    <CRequirementCountUpgrade id="CountUpgradeSensorArrayCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SensorArray" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSensorArrayQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SensorArray" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSiegeTankRangeIncreaseCompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SiegeTankRangeIncrease" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeSiegeTankRangeIncreaseQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="SiegeTankRangeIncrease" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTacticalJumpCompleteOnly3425159199">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TacticalJump" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTacticalJumpQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TacticalJump" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeTempestGroundAttackUpgradeCompleteOnly1701400742">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="TempestGroundAttackUpgrade" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeadvancedHealingAICompleteOnly">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="advancedHealingAI" State="CompleteOnly"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeadvancedHealingAIQueuedOrBetter">
+        <Flags index="TechTreeCheat" value="0"/>
+        <Count Link="advancedHealingAI" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementNot id="NotCountUpgradeAerialHomeostasisQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAerialHomeostasisQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeAntiCorrosionContainerQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeAntiCorrosionContainerQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeDiggingClawsCompleteOnly">
+        <OperandArray index="0" value="CountUpgradeDiggingClawsCompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeHatcheryCapacityQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeHatcheryCapacityQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeLurkerRangeQueuedOrBetterTechTreeCheat"/>
+    <CRequirementNot id="NotCountUpgradeSensorArrayQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSensorArrayQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeSiegeTankRangeIncreaseQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeSiegeTankRangeIncreaseQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeTacticalJumpQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeTacticalJumpQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeadvancedHealingAICompleteOnly">
+        <OperandArray index="0" value="CountUpgradeadvancedHealingAICompleteOnly"/>
+    </CRequirementNot>
+    <CRequirementNot id="NotCountUpgradeadvancedHealingAIQueuedOrBetter">
+        <OperandArray index="0" value="CountUpgradeadvancedHealingAIQueuedOrBetter"/>
+    </CRequirementNot>
+    <CRequirementOr id="Or2407241998CountUnitLairCompleteOnlyTechTreeCheatCountUnitHiveCompleteOnlyTechTreeCheat">
+        <OperandArray value="CountUnitLairCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="CountUnitHiveCompleteOnlyTechTreeCheat"/>
+    </CRequirementOr>
+    <CRequirementOr id="Or2407241998CountUnitLairCompleteOnlyTechTreeCheatCountUnitHiveQueuedOrBetterTechTreeCheat">
+        <OperandArray value="CountUnitLairCompleteOnlyTechTreeCheat"/>
+        <OperandArray value="CountUnitHiveQueuedOrBetterTechTreeCheat"/>
+    </CRequirementOr>
+</Catalog>

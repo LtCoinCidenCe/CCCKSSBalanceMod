@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CRequirement id="HaveAerialHomeoStatis">
+        <EditorCategories value="Race:Zerg"/>
+        <NodeArray index="Use" Link="CountUpgradeAerialHomeostasisCompleteOnly2704428533"/>
+    </CRequirement>
+    <CRequirement id="HaveSensorArray">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeSensorArrayCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="HaveTempestGroundAttackUpgrade">
+        <NodeArray index="Use" Link="CountUpgradeTempestGroundAttackUpgradeCompleteOnly1701400742"/>
+    </CRequirement>
+    <CRequirement id="LearnAdvancedHealingAI">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeadvancedHealingAIQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnAerialHomeoStasis">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitHiveCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAerialHomeostasisQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnAntiCorrosionContainer">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="Or1515591279CountUnitLairCompleteOnlyTechTreeCheatCountUnitHiveCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeAntiCorrosionContainerQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnDrillingClaws">
+        <NodeArray index="Use" Link=""/>
+    </CRequirement>
+    <CRequirement id="LearnEvolveSeismicSpines">
+        <NodeArray index="Use" Link="Or2407241998CountUnitLairCompleteOnlyTechTreeCheatCountUnitHiveCompleteOnlyTechTreeCheat"/>
+    </CRequirement>
+    <CRequirement id="LearnHatcheryCapacity">
+        <EditorCategories value="Race:Zerg,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="Or2407241998CountUnitLairCompleteOnlyTechTreeCheatCountUnitHiveQueuedOrBetterTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeHatcheryCapacityQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnSiegeTankRangeIncrease">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUnitArmoryCompleteOnlyTechTreeCheat"/>
+        <NodeArray index="Show" Link="NotCountUpgradeSiegeTankRangeIncreaseQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnSensorArray">
+        <EditorCategories value="Race:Protoss,TechType:Upgrade"/>
+        <NodeArray index="Show" Link="NotCountUpgradeSensorArrayQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="LearnTacticalJump">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountUpgradeTacticalJumpQueuedOrBetter"/>
+    </CRequirement>
+    <CRequirement id="HaveMaelStromRoundsUpgrade">
+        <EditorCategories value="Race:Terran,TechType:Upgrade"/>
+        <NodeArray index="Use" Link="CountUpgradeSiegeTankRangeIncreaseCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NoUseAdaptiveTalons">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <NodeArray index="Show" Link="NotCountUpgradeDiggingClawsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="NoUseAdvancedHealingAI">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="NotCountUpgradeadvancedHealingAICompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="RavenChargeBehaviorDisableAttack">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountBehaviorRavenChargeInitialSelfCompleteOnlyAtUnit"/>
+    </CRequirement>
+    <CRequirement id="UseAdaptiveTalons">
+        <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <NodeArray index="Show" Link="CountUpgradeDiggingClawsCompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseAdvancedHealingAI">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Show" Link="CountUpgradeadvancedHealingAICompleteOnly"/>
+    </CRequirement>
+    <CRequirement id="UseTacticalJump">
+        <EditorCategories value="Race:Terran,TechType:Ability"/>
+        <NodeArray index="Use" Link="CountUpgradeTacticalJumpCompleteOnly3425159199"/>
+    </CRequirement>
+</Catalog>

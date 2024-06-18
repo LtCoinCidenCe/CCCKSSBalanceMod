@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CMoverMissile id="NeedleSpinesWeapon">
+        <MotionPhases index="0" Speed="20" MaxSpeed="20"/>
+    </CMoverMissile>
+</Catalog>

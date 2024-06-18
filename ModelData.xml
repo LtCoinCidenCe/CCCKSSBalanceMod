@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CModel id="CycloneMissile">
+        <ScaleMax value="0.600000,0.600000,0.600000"/>
+        <ScaleMin value="0.600000,0.600000,0.600000"/>
+    </CModel>
+    <CModel id="Disruptor">
+        <Radius value="5.000000"/>
+        <SelectionRadius value="1.000000"/>
+        <ShadowRadius value="1.000000"/>
+    </CModel>
+    <CModel id="MiraHorner_Raven_Coop_TargetLockBeam" parent="RacePersistentSpellFX" Race="Terran"/>
+    <CModel id="MiraHorner_Raven_Coop_Target_Impact" parent="RaceOneShotSpellFX" Race="Terran"/>
+    <CModel id="TemporalFieldAfterBubbleModelCCCBLOLISHIP" parent="TemporalFieldAfterBubbleModel">
+        <Model value="Assets\Effects\Protoss\TimeWarp\TimeWarp.m3"/>
+    </CModel>
+    <CModel id="TemporalFieldGrowingBubbleModelCCCBLOLISHIP" parent="TemporalFieldGrowingBubbleModel">
+        <Model value="Assets\Effects\Protoss\TimeWarp\TimeWarp.m3"/>
+    </CModel>
+    <CModel id="TemporalFieldImpactModelCCCBLOLISHIP" parent="TemporalFieldImpactModel">
+        <Model value="Assets\Effects\Protoss\TemporalFieldImpact\TemporalFieldImpact.m3"/>
+    </CModel>
+</Catalog>

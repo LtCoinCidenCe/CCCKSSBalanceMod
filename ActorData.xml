@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CActorModel id="ChronoBoostBehaviorExtended" parent="ChronoBoostEnergyCostBehavior">
+        <EditorCategories value=""/>
+        <On index="4" Terms="Behavior.ChronoBoostExtended.On" Send="Create"/>
+        <On index="5" Terms="Behavior.ChronoBoostExtended.Off" Send="AnimBracketStop BSD"/>
+    </CActorModel>
+    <CActorUnit id="Corruptor">
+        <Remove Terms="WeaponStart.*.AttackStart" Send="AnimBracketStart Attack Attack"/>
+        <On Terms="Effect.ParasiteSporeLaunchMissile.Start" Send="AnimBracketStart Attack Attack"/>
+    </CActorUnit>
+    <!--CActorMissile id="CycloneMissile">-->
+    <!--        <On Terms="ActorCreation" Send="SetTintColor 255,202,202"/>-->
+    <!--    </CActorMissile-->
+    <CActorModel id="CycloneUpgradeBeamLeft">
+        <On index="0" Send="AnimBracketStart BSD {} Stand Death"/>
+    </CActorModel>
+    <CActorModel id="CycloneUpgradeBeamRight">
+        <On index="0" Send="AnimBracketStart BSD {} Stand Death"/>
+    </CActorModel>
+    <CActorUnit id="Hydralisk"/>
+    <CActorUnit id="LiberatorAG">
+        <On Terms="WeaponStart.LiberatorAGMissileLaunchers.AttackStart" Send="StatusIncrement WeaponTracker"/>
+        <On Terms="WeaponStop.LiberatorAGMissileLaunchers.AttackStop" Send="StatusDecrement WeaponTracker"/>
+        <On Terms="WeaponStart.LiberatorAGMissileLaunchers.AttackStart" Send="AnimBracketStart Attack Cover,Start Cover Cover,End"/>
+        <On Terms="WeaponStop.LiberatorAGMissileLaunchers.AttackStop" Send="TimerSet 2.000000 LiberatorAttack"/>
+        <On Terms="TimerExpired; TimerName LiberatorAttack; !HasStatus WeaponTracker" Send="AnimBracketStop Attack"/>
+    </CActorUnit>
+    <CActorMissile id="AdeptUpgradeAttackMissile">
+        <On Terms="ActorCreation; ValidateUnit AdeptGlaivesUpgraded" Send="ModelSwap Adept_Missile_Upgrade"/>
+    </CActorMissile>
+    <CActorRange id="BatteryOverchargeRange">
+        <Range value="0.000000"/>
+        <On index="2" removed="1"/>
+        <On index="3" removed="1"/>
+    </CActorRange>
+    <CActorSound id="ChronoBoostEnergyCostImpactSound">
+        <On index="1" Terms="Abil.ChronoBoostEnergyCost.TargetCastStart"/>
+    </CActorSound>
+    <CActorUnit id="Cyclone">
+        <!--On Terms="WeaponStart.*.AttackStart; IsStatus AttackOn 0" Send="AnimPlay Attack Attack PlayForever -1.000000 -1.000000 1.000000 AsTimeScale"/>
+        <On Terms="WeaponStart.*.AttackStart; IsStatus AttackOn 0" Send="StatusSet AttackOn 1"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="TimerKill AttackDelay"/>
+        <On Terms="WeaponStart.*.AttackStart" Send="TimerSet 0.500000 AttackDelay"/>
+        <On Terms="TimerExpired; TimerName AttackDelay" Send="AnimClear Attack"/>
+        <On Terms="TimerExpired; TimerName AttackDelay" Send="StatusSet AttackOn 0"/>
+        <On Terms="Abil.attack.ReadyStop" Send="StatusSet AttackOn 0"/>
+        <On Terms="Abil.attack.ReadyStop" Send="AnimClear Attack"/>
+        <On Terms="ActorCreation; ValidatePlayer HasRapidFireLaunchersUpgrade" Send="Create CycloneUpgradeBeamLeft"/>
+        <On Terms="ActorCreation; ValidatePlayer HasRapidFireLaunchersUpgrade" Send="Create CycloneUpgradeBeamRight"/>
+        <On Terms="Upgrade.CycloneRapidFireLaunchers.Add" Send="Create CycloneUpgradeBeamLeft"/>
+        <On Terms="Upgrade.CycloneRapidFireLaunchers.Add" Send="Create CycloneUpgradeBeamRight"/>
+        <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamLeft" Send="Destroy"/>
+        <On Terms="Upgrade.CycloneRapidFireLaunchers.Remove" Target="CycloneUpgradeBeamRight" Send="Destroy"/-->
+        <On index="97" Terms="ActorCreation; ValidatePlayer HasRapidFireLaunchersUpgrade"/>
+        <On index="98" Terms="ActorCreation; ValidatePlayer HasRapidFireLaunchersUpgrade"/>
+        <On index="99" Terms="Upgrade.CycloneRapidFireLaunchers.Add"/>
+        <On index="100" Terms="Upgrade.CycloneRapidFireLaunchers.Add"/>
+        <On index="101" Terms="Upgrade.CycloneRapidFireLaunchers.Remove"/>
+        <On index="102" Terms="Upgrade.CycloneRapidFireLaunchers.Remove"/>
+        <On Terms="ActorCreation" Send="Create CycloneUpgradeBeamLeft"/>
+        <On Terms="ActorCreation" Send="Create CycloneUpgradeBeamRight"/>
+        <On Terms="Effect.CycloneConsumeMissile.Stop; ValidateUnit CycloneAmmoEmpty" Target="CycloneUpgradeBeamLeft" Send="Destroy"/>
+        <On Terms="Effect.CycloneConsumeMissile.Stop; ValidateUnit CycloneAmmoEmpty" Target="CycloneUpgradeBeamRight" Send="Destroy"/>
+        <On Terms="Effect.CycloneAddAmmo.Start; ValidateUnit CycloneAmmoEmpty" Send="Create CycloneUpgradeBeamLeft"/>
+        <On Terms="Effect.CycloneAddAmmo.Start; ValidateUnit CycloneAmmoEmpty" Send="Create CycloneUpgradeBeamRight"/>
+        <AbilSoundArray index="0" AbilCmd="" Sound=""/>
+        <AbilSoundArray index="1" removed="1"/>
+    </CActorUnit>
+    <CActorSound id="Cyclone_TargetLock_On_ActorSound">
+        <On Terms="Effect.LockOnCPCCCKSSUpgraded.Start; At Caster" Send="Create"/>
+    </CActorSound>
+    <!--CActorModel id="ColossusDeathRagdoll">-->
+    <!--        <On Terms="ActorCreation; PlayerHasReward ColossusCE" Send="ModelSwap ColossusCEDeathRagdoll"/>-->
+    <!--        <On Terms="ActorCreation; PlayerHasReward ColossusTal" Send="ModelSwap Colossus_Taldarim_MP_DeathRagdoll"/>-->
+    <!--    </CActorModel-->
+    <CActorRange id="EggMonsterHarpyRange">
+        <On index="1" removed="1"/>
+        <On index="2" removed="1"/>
+        <On index="3" removed="1"/>
+        <On index="4" removed="1"/>
+        <On index="5" removed="1"/>
+        <On index="6" removed="1"/>
+        <On index="7" removed="1"/>
+        <On index="8" removed="1"/>
+    </CActorRange>
+    <CActorUnit id="LocustMPFlying">
+        <On Terms="WeaponStart.LocustMPAerial.AttackStart; WeaponTargetElevation GE 20.000000" Send="AnimBracketStart Attack Attack,Superior"/>
+        <On Terms="WeaponStart.LocustMPAerial.AttackStart; WeaponTargetElevation LE -20.000000" Send="AnimBracketStart Attack Attack,Inferior"/>
+        <On Terms="WeaponStart.LocustMPAerial.AttackStart" Send="AnimPlay Attack Attack"/>
+        <On Terms="WeaponStop.LocustMPAerial.AttackStop" Send="AnimBracketStop Attack"/>
+    </CActorUnit>
+    <CActorSplat id="MassRecallCursorSplat2" parent="ProtossCursorSplat" abil="MassRecallSmall"/>
+    <CActorBeamSimple id="MedivacHealBeamRev12" parent="BeamSimpleAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <Supporter Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <On Terms="Effect.MedivacHeal3.TargetStart" Send="Create"/>
+        <On Terms="Effect.MedivacHeal3.TargetStop" Send="Destroy"/>
+        <On Terms="Effect.MedivacHeal2.TargetStart" Send="Create"/>
+        <On Terms="Effect.MedivacHeal2.TargetStop" Send="Destroy"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Host Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Model value="MedivacHealBeam"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="_Unit" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorModel id="MedivacHealModelRev12" parent="ModelAnimationStyleContinuous">
+        <On Terms="ActorCreation" Send="$Birth PlayForever"/>
+        <On Terms="Effect.MedivacHeal2.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.MedivacHeal2.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="Effect.MedivacHeal3.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.MedivacHeal3.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Model value="MedicHealModel"/>
+    </CActorModel>
+    <CActorSound id="MedivacHealSoundRev12" parent="SoundContinuous">
+        <On Terms="Effect.MedivacHeal2.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.MedivacHeal2.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="Effect.MedivacHeal3.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.MedivacHeal3.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create MedivacHealSoundStart"/>
+        <On Terms="ActorDestruction" Send="Create MedivacHealSoundStop"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Sound value="Medivac_HealLoop"/>
+    </CActorSound>
+    <CActorModel id="MedivacHealModelRev124" parent="ModelAnimationStyleContinuous">
+        <On Terms="ActorCreation" Send="$Birth PlayForever"/>
+        <On Terms="Effect.MedivacHeal4.TargetStart; At Target" Send="Create"/>
+        <On Terms="Effect.MedivacHeal4.TargetStop; At Target" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOverhead"/>
+        <Model value="MedicHealModel"/>
+    </CActorModel>
+    <CActorBeamSimple id="MedivacHealBeamRev124" parent="BeamSimpleAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <Supporter Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <On Terms="Effect.MedivacHeal4.TargetStop; At Target" Send="Destroy"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Host Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <Model value="MedivacHealBeam"/>
+        <HostLaunch Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="::Creator" Scope="Target" Actor="Find"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+    </CActorBeamSimple>
+    <CActorSite id="MedivacDoubleHealBeamImpactSite124" parent="SiteCenter">
+        <On Terms="Effect.MedivacHeal4.Start; At Target" Send="Create"/>
+        <On Terms="Effect.MedivacHeal4.Stop" Send="Destroy"/>
+        <On Terms="ActorCreation" Send="Create MedivacHealBeamRev124"/>
+    </CActorSite>
+    <CActorUnit id="Mothership">
+        <On index="65" Terms="Abil.MassRecall.SourceCastStart; IsStatus casting 0"/>
+        <On Terms="Behavior.mothershipPurify.On" Send="AnimBracketStart mpactivated Stand,Work,Start Stand,Work Stand,Work,End"/>
+        <On Terms="Behavior.mothershipPurify.Off" Send="AnimBracketStop mpactivated"/>
+        <On Terms="Behavior.mothershipPurify.On" Send="StatusSet casting 1"/>
+        <On Terms="Behavior.mothershipPurify.Off" Send="StatusSet casting 0"/>
+    </CActorUnit>
+    <CActorModel id="MothershipCorePurifyLight">
+        <On Terms="Behavior.mothershipPurify.On" Send="Create"/>
+        <On Terms="Behavior.mothershipPurify.Off" Send="Destroy"/>
+    </CActorModel>
+    <!-- Proto Mothership Attack                                                                        -->
+    <CActorRange id="MothershipCoreWeaponRange">
+        <On index="5" Terms="Behavior.mothershipPurify.On"/>
+        <On index="6" Terms="Behavior.mothershipPurify.Off"/>
+    </CActorRange>
+    <CActorBeamSimple id="MothershipcoreTemporalFieldBeamGreen" parent="BeamSimpleAnimationStyleOneShot">
+        <EditorCategories value=""/>
+        <Remove Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death ContentPlayOnce"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth Stand Death OpeningPlayForever"/>
+        <On Terms="Abil.TemporalFieldGreen.SourceCastStart" Send="Create"/>
+        <On Terms="Abil.TemporalFieldGreen.SourceChannelStop" Send="Destroy"/>
+        <Model value="MothershipAttackBeam"/>
+        <HostLaunch Subject="_Selectable"/>
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpact Subject="_Selectable"/>
+        <HostImpactSiteOps Ops="SOpLowerBy375"/>
+    </CActorBeamSimple>
+    <CActorModel id="MothershipcoreMassRecallWarpInImpact2" parent="ModelAnimationStyleOneShot">
+        <On Terms="Effect.NexusMassRecallTeleport.Start; At Target" Send="Create"/>
+        <On Terms="Effect.MothershipcoreStrategicRecallTeleport2.Start; At Target" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <Model value="NexusMassRecallWarpIn"/>
+    </CActorModel>
+    <CActorSound id="MothershipcoreMassRecallWarpInSound" parent="SoundOneShot">
+        <On Terms="Effect.NexusMassRecallTeleport.Start; At Target" Send="Create"/>
+        <On Terms="Effect.MothershipcoreStrategicRecallTeleport2.Start; At Target" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <Sound value="Mothership_RecallEnd"/>
+    </CActorSound>
+    <CActorSound id="MothershipcoreMassRecallWarpOutSound" parent="SoundOneShot">
+        <On Terms="Behavior.MothershipcoreStrategicWarpOut.On" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <Sound value="Mothership_RecallStart"/>
+    </CActorSound>
+    <CActorModel id="MothershipcoreMassRecallWarping" parent="ModelAnimationStyleContinuous">
+        <On Terms="Behavior.MothershipcoreStrategicWarpOut.On" Send="Create"/>
+        <On Terms="Behavior.MothershipcoreStrategicWarpOut.Off" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation; ValidateUnit IsCarrier" Send="SetScale 0.750000"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter"/>
+        <Model value="NexusMassRecallWarping"/>
+        <AutoScaleFactor value="0.500000"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+    </CActorModel>
+    <CActorSound id="MothershipcoreMassRecallNexusCastingSound2" parent="SoundOneShot">
+        <On Terms="Effect.MothershipcoreStrategicRecallSearch.Start" Send="Create"/>
+        <Host Subject="_Selectable"/>
+        <Sound value="Mothership_RecallStart"/>
+    </CActorSound>
+    <CActorAction id="MutaliskAttackSegment2"/>
+    <CActorAction id="MutaliskAttackSegment3"/>
+    <!--                                                                                         -->
+    <!-- Nexus ................................................................................. -->
+    <!--                                                                                         -->
+    <CActorUnit id="Nexus">
+        <PlacementActorModel value="PlacementModel"/>
+    </CActorUnit>
+    <CActorUnit id="Observer"/>
+    <CActorModel id="PurificationNova"/>
+    <CActorModel id="PurificationNovaRangeIndicator"/>
+    <CActorUnit id="PurifierMineralField750">
+        <On index="89" Send="AnimGroupApply D"/>
+        <On index="90" Send="AnimGroupRemove D"/>
+    </CActorUnit>
+    <CActorUnit id="PurifierRichMineralField750">
+        <On index="89" Send="AnimGroupApply D"/>
+        <On index="90" Send="AnimGroupRemove D"/>
+    </CActorUnit>
+    <CActorAction id="RavagerCorrosiveBileAttackDown">
+        <On Terms="Effect.CorrosiveBileLaunchDowntoPrecursor.Start; At Caster" Send="Create"/>
+    </CActorAction>
+    <CActorRange id="RavenChargeAbilRange" parent="RangeAbil" abil="RavenChargeInitial">
+        <Icon value="Assets\Textures\RadarIcon2.dds"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <CActorSound id="RavenChargeAbilSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Abil.RavenChargeInitial.SourcePrepStart" Send="Create"/>
+        <Sound value="Cyclone_TargetLock_On"/>
+    </CActorSound>
+    <CActorSound id="RavenChargeAcceSound" parent="SoundOneShot">
+        <EditorCategories value=""/>
+        <On Terms="Effect.RavenChargeIssueAccelerateOrder.Start" Send="Create"/>
+        <Sound value="Raven_HunterSeekerTargetLock"/>
+    </CActorSound>
+    <CActorBeamSimple id="RavenChargeLaserBeam" parent="BeamSimpleAnimationStyleContinuous">
+        <Inherits index="Visibility" value="1"/>
+        <HostForProps Subject="_Unit" Scope="Caster" Actor="Find"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <HostLaunch Subject="_Unit" Scope="Caster"/>
+        <HostLaunchSiteOps Ops="SOpAttachWeapon"/>
+        <HostImpact Subject="_Unit" Scope="Target"/>
+        <HostImpactSiteOps Ops="SOpAttachCenter"/>
+        <Model value="MiraHorner_Raven_Coop_TargetLockBeam"/>
+        <On Terms="Effect.RavenChargeInitial.Start; At Target" Send="Create"/>
+        <On Terms="Effect.RavenChargeInitial.Stop; At Target" Send="AnimBracketStop BSD"/>
+    </CActorBeamSimple>
+    <CActorModel id="RavenChargeTargetAttachment" parent="ModelAnimationStyleContinuous">
+        <EditorCategories value=""/>
+        <On Terms="Effect.RavenChargeInitial.Start; At Target" Send="Create"/>
+        <On Terms="Effect.RavenChargeInitial.Stop; At Target" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorCreation" Send="SetOpacity 0.500000"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Host Subject="_Selectable"/>
+        <HostSiteOps Ops="SOpAttachCenter" HoldRotation="1"/>
+        <AutoScaleFactor value="0.500000"/>
+        <ModelFlags index="AutomateGlobalLoops" value="1"/>
+        <Model value="MiraHorner_Raven_Coop_Target_Impact"/>
+    </CActorModel>
+    <CActorSound id="ShieldAbsorbImmortalSound">
+        <On Terms="Behavior.ImmortalOverload.DamageExhausted" Send="Create"/>
+    </CActorSound>
+    <!--                                                                                         -->
+    <CActorModel id="ShieldAbsorbImmortalViz">
+        <On Terms="Behavior.ImmortalOverload.DamageExhausted" Send="Create"/>
+    </CActorModel>
+    <CActorModel id="ShieldBatteryPlacementModel">
+        <On index="7" Terms="ActorDestruction" Send="Destroy"/>
+        <On index="8" removed="1"/>
+        <On index="9" removed="1"/>
+        <On index="10" removed="1"/>
+        <On index="11" removed="1"/>
+        <On index="12" removed="1"/>
+        <On index="13" removed="1"/>
+        <On index="14" removed="1"/>
+        <On index="15" removed="1"/>
+        <On index="16" removed="1"/>
+        <On index="17" removed="1"/>
+        <On index="18" removed="1"/>
+    </CActorModel>
+    <!-- Spawning Mutant Larva Effect                                                            -->
+    <!--    <CActorRange id="SpawnMutantLarvaRange" parent="RangeAbil" abil="SpawnMutantLarva"/> -->
+    <CActorModel id="SpawningMutantLarva1">
+        <Remove index="0" removed="1"/>
+        <Remove index="1" removed="1"/>
+    </CActorModel>
+    <CActorModel id="StormSphereAttachment">
+        <On Terms="ActorCreation; ValidatePlayer TempestGroundAttackUpgraded" Send="SetTintColor {255,60,0 4.000000}"/>
+        <On Terms="Signal.*.GAU" Send="SetTintColor {255,60,0 4.000000} 1.000000"/>
+        <On Terms="ActorCreation" Send="SetCastShadows"/>
+    </CActorModel>
+    <CActorUnit id="Tempest">
+        <On Terms="Upgrade.TempestGroundAttackUpgrade.Add" Target="StormSphereAttachment" Send="Signal GAU"/>
+    </CActorUnit>
+    <CActorAction id="TempestAttack">
+        <ImpactModel value="TempestAttackImpactUpgraded"/>
+    </CActorAction>
+    <CActorAction id="TempestAttackGround">
+        <ImpactMap index="None" Model="TempestAttackImpact"/>
+        <ImpactModel value="TempestAttackImpactUpgraded"/>
+        <!--ImpactModel value="TempestGroundAttackImpactModel"/-->
+    </CActorAction>
+    <!--CActorModel id="TempestGroundAttackImpactModel" parent="GenericAttackModel">-->
+    <!--        <On Terms="ActorCreation" Send="SetTintColor 255,64,64"/>-->
+    <!--    </CActorModel-->
+    <CActorMissile id="TempestAttackGroundMissile">
+        <Model value="TempestWeapon"/>
+        <On index="4" Send="SetTintColor {255,60,0 4.000000}"/>
+        <On index="5" Terms="ActorCreation" Send="SetCastShadows"/>
+        <Macros value="GlobalLoopMacro"/>
+        <Macros value="GlobalLoopMacroMore"/>
+    </CActorMissile>
+    <CActorModel id="TempestAttackImpactUpgraded" parent="GenericAttackModel">
+        <On Terms="ActorCreation; ValidateCreationEffect TempestGroundAttackUpgraded" Send="SetTintColor {255,60,0 4.000000}"/>
+    </CActorModel>
+    <CActorMissile id="TempestAttackMissile">
+        <On Terms="ActorCreation; ValidateUnit TempestGroundAttackUpgraded" Send="SetTintColor {255,60,0 4.000000}"/>
+        <On Terms="ActorCreation" Send="SetCastShadows"/>
+    </CActorMissile>
+    <CActorAction id="TempestSelfDamageShieldFlash" parent="GenericAttack" effectAttack="TempestSelfDamage">
+        <ShieldFlashType value="Full"/>
+    </CActorAction>
+    <CActorModel id="TemporalFieldAfterBubbleModelGreen">
+        <Macros value="GlobalLoopMacro"/>
+        <On Terms="Effect.TemporalFieldAfterBubbleCreatePersistentGreen.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD {} Stand Death"/>
+        <On Terms="ActorCreation" Send="$Spell 0 0.000000"/>
+        <On Terms="Effect.TemporalFieldAfterBubbleCreatePersistentGreen.Stop" Send="AnimBracketStop BSD"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="AnimBracketState.*.AfterClosing; !AnimBracketExitReason ModelSwap; AnimName BSD" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow"/>
+        <Model value="TemporalFieldAfterBubbleModelCCCBLOLISHIP"/>
+    </CActorModel>
+    <CActorSound id="TemporalFieldBubbleEndGreen" parent="SoundOneShot">
+        <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistentGreen.Stop" Send="Create"/>
+        <Sound value="Mothership_TimeWarpEnd"/>
+    </CActorSound>
+    <CActorSound id="TemporalFieldBubbleLaunch2Green" parent="SoundOneShot">
+        <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistentGreen.Start" Send="Create"/>
+        <Sound value="Mothership_TimeWarpLaunch2"/>
+    </CActorSound>
+    <CActorSound id="TemporalFieldBubbleLaunch3Green" parent="SoundOneShot">
+        <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistentGreen.Start" Send="Create"/>
+        <Sound value="Mothership_TimeWarpLaunch3"/>
+    </CActorSound>
+    <CActorSound id="TemporalFieldBubbleLaunchGreen" parent="SoundOneShot">
+        <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistentGreen.Start" Send="Create"/>
+        <Sound value="Mothership_TimeWarpLaunch"/>
+    </CActorSound>
+    <CActorSound id="TemporalFieldBubbleLoopGreen" parent="SoundContinuous">
+        <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistentGreen.Start" Send="Create"/>
+        <On Terms="Effect.TemporalFieldAfterBubbleCreatePersistent.Stop" Send="Destroy"/>
+        <Sound value="Mothership_TimeWarpLoop"/>
+    </CActorSound>
+    <CActorSplat id="TemporalFieldCursorSplatGreen" parent="ProtossCursorSplat" abil="TemporalFieldGreen"/>
+    <CActorModel id="TemporalFieldGrowingBubbleModelGreen">
+        <Macros value="GlobalLoopMacro"/>
+        <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistentGreen.Start" Send="Create"/>
+        <On Terms="ActorCreation" Send="AnimBracketStart BSD Birth {} {} 0 2.500000 AsDuration"/>
+        <On Terms="Effect.TemporalFieldGrowingBubbleCreatePersistentGreen.Stop" Send="Destroy"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="AnimBracketState.*.AfterClosing; !AnimBracketExitReason ModelSwap; AnimName BSD" Send="Destroy"/>
+        <HostSiteOps Ops="SOpShadow"/>
+        <Model value="TemporalFieldGrowingBubbleModelCCCBLOLISHIP"/>
+    </CActorModel>
+    <CActorModel id="TemporalFieldImpactModelGreen" parent="ModelAnimationStyleOneShot">
+        <Terms value="Cap 1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <On Terms="Behavior.TemporalFieldGreen.On" Send="Create"/>
+        <On Terms="ActorCreation; ValidateUnit IsCarrier" Send="SetScale 0.400000"/>
+        <On Terms="ActorCreation; ValidateUnit IsTempest" Send="SetScale 0.600000"/>
+        <On Terms="ActorCreation; ValidateUnit IsStalker" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsMothershipCore" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsMothership" Send="SetScale 0.300000"/>
+        <On Terms="ActorCreation; ValidateUnit IsOracle" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsColossus" Send="SetScale 0.600000"/>
+        <On Terms="ActorCreation; ValidateUnit IsImmortal" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsArchon" Send="SetScale 0.800000"/>
+        <On Terms="ActorCreation; ValidateUnit IsWarpPrism" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsWarpPrismPhasing" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsPhoenix" Send="SetScale 0.600000"/>
+        <On Terms="ActorCreation; ValidateUnit IsVoidRay" Send="SetScale 0.600000"/>
+        <On Terms="ActorCreation; ValidateUnit IsBattlecruiser" Send="SetScale 0.600000"/>
+        <On Terms="ActorCreation; ValidateUnit IsSiegeTank" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsThor" Send="SetScale 0.400000"/>
+        <On Terms="ActorCreation; ValidateUnit IsBanshee" Send="SetScale 0.600000"/>
+        <On Terms="ActorCreation; ValidateUnit IsViking" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsWarHound" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsHellion" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsHellionTank" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsMedivac" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsRaven" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsUltralisk" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsUltraliskBurrowed" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsQueen" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsQueenBurrowed" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsOverseer" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsOverlord" Send="SetScale 0.500000"/>
+        <On Terms="ActorCreation; ValidateUnit IsBroodLord" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsInfestor" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsInfestorBurrowed" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsHydralisk" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsHydraliskBurrowed" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsSwarmHost" Send="SetScale 0.700000"/>
+        <On Terms="ActorCreation; ValidateUnit IsSwarmHostBurrowed" Send="SetScale 0.700000"/>
+        <Host Subject="_Unit"/>
+        <HostSiteOps Ops="SOpAttachOrigin"/>
+        <Model value="TemporalFieldImpactModelCCCBLOLISHIP"/>
+        <AutoScaleFactor value="1.000000"/>
+        <ModelFlags index="AllowHitTest" value="0"/>
+    </CActorModel>
+    <CActorRange id="TemporalFieldRangeGreen">
+        <EditorCategories value=""/>
+        <On Terms="Abil.TemporalFieldGreen.TargetOn" Send="Create"/>
+        <On Terms="Abil.TemporalFieldGreen.TargetOff" Send="Destroy"/>
+        <Abil Link="TemporalField"/>
+        <IconArcLength value="3.250000"/>
+    </CActorRange>
+    <!--CActorAction id="ThorAAAttackLance" parent="GenericAttack" effectImpact="LanceMissileLaunchersDamage" effectLaunch="LanceMissileLaunchersLaunchMissile">-->
+    <!--        <LaunchAttachQuery Methods="AMFilterWeaponSetA2 AMPatternThorAALance"/>-->
+    <!--        <LaunchAssets Model="ThorAAAttackLaunchLance" Sound="Thor_AntiAirAttackLaunchLance"/>-->
+    <!--        <Missile value="ThorAAAttackMissileLance"/>-->
+    <!--        <ImpactMap index="None" Model="ThorAAAttackImpactLance" Sound="Thor_AntiAirAttackImpactLance"/>-->
+    <!--        <ImpactPhysics Name="JavelinImpact" MatchKeys="Basic" Physics="ThorAAAttackForce"/>-->
+    <!--    </CActorAction-->
+    <!--CActorMissile id="ThorAAAttackMissileLance" parent="GenericAttackMissile" unitName="ThorAALance">-->
+    <!--        <Model value="ThorAAWeaponLance"/>-->
+    <!--    </CActorMissile-->
+    <CActorUnit id="Ultralisk"/>
+    <CActorSplat id="UltraliskBurrowedSplat"/>
+    <CActorUnit id="VoidRay">
+        <Remove index="0" removed="1"/>
+        <Remove index="1" removed="1"/>
+        <Remove index="2" removed="1"/>
+        <Remove index="3" removed="1"/>
+        <On index="66" Terms="WeaponStop.*.AttackStop; ValidateUnit VoidRayEnergy0"/>
+        <On index="68" Terms="Behavior.VoidRayEnergyCounter.Off; !HasStatus WeaponTracker"/>
+        <On index="69" Terms="Behavior.Hallucination.On" Send="Create HallucinationBirthSoundLarge"/>
+        <On index="70" Terms="UnitDeathCustomize; ValidateUnit IsHallucination" Send="DeathCustomize Hallucination"/>
+        <On index="71" Terms="UnitHeightUpdate.*.Land" Send="Create VoidRay_Land"/>
+        <On index="72" Terms="Behavior.WarpInEffect.Off; HasStatus WeaponTracker" Send="AnimBracketStart Attack Attack Stand,Channel Attack,End"/>
+        <On index="73" Terms="Behavior.WarpInEffect.On" Send="ModelSwap VoidRayWarpInStargate"/>
+        <On index="74" Terms="Behavior.WarpInEffect.On" Send="$Spell"/>
+        <On index="75" Terms="Behavior.WarpInEffect.On" Send="AnimBaselineStop"/>
+        <On index="76" Terms="Behavior.WarpInEffect.Off" Send="ModelSwap VoidRay"/>
+        <On index="77" Terms="Behavior.WarpInEffect.Off" Send="AnimBaselineStart"/>
+        <On index="78" Terms="Behavior.VoidRayPhase3Activator.On" Send="AnimBracketStart Attack Attack Stand,Channel Attack,End"/>
+        <On index="79" removed="1"/>
+        <On index="80" removed="1"/>
+        <On index="81" removed="1"/>
+        <On index="82" removed="1"/>
+        <On index="83" removed="1"/>
+        <On index="84" removed="1"/>
+        <On index="85" removed="1"/>
+        <On index="86" removed="1"/>
+        <On index="87" removed="1"/>
+        <On index="88" removed="1"/>
+        <On index="89" removed="1"/>
+        <On index="90" removed="1"/>
+        <On index="91" removed="1"/>
+        <On index="92" removed="1"/>
+        <On index="93" removed="1"/>
+        <On index="94" removed="1"/>
+        <On index="95" removed="1"/>
+        <On index="96" removed="1"/>
+        <On index="97" removed="1"/>
+        <On index="98" removed="1"/>
+        <On index="99" removed="1"/>
+        <On index="100" removed="1"/>
+        <On index="101" removed="1"/>
+        <On index="102" removed="1"/>
+        <On index="103" removed="1"/>
+        <On index="104" removed="1"/>
+        <On index="105" removed="1"/>
+        <On index="106" removed="1"/>
+        <On index="107" removed="1"/>
+        <On index="108" removed="1"/>
+    </CActorUnit>
+    <CActorBeamSimple id="VoidRayAttackBeamCCC">
+        <On Terms="ActorCreation; ValidateUnit VoidRayEnergyLessThan6" Send="AnimPlay Attack Attack,02 PlayForever"/>
+        <On Terms="ActorCreation; ValidateUnit VoidRayEnergyPhase2" Send="AnimPlay Attack Attack,04 PlayForever"/>
+        <On Terms="ActorCreation; ValidateUnit VoidRayEnergyEqualorHigherThan12" Send="AnimPlay Attack Attack,06 PlayForever"/>
+        <On Terms="ActorOrphan" Send="Destroy"/>
+        <On Terms="Effect.VoidRayMainChanneling.Start; FromEffectTreeDescendant; ValidateUnit VoidRayEnergyLessThan6" Send="AnimPlay Attack Attack,02 PlayForever"/>
+        <On Terms="Effect.VoidRayMainChanneling.Start; FromEffectTreeDescendant; ValidateUnit VoidRayEnergyPhase2" Send="AnimPlay Attack Attack,04 PlayForever"/>
+        <On Terms="Effect.VoidRayMainChanneling.Start; FromEffectTreeDescendant; ValidateUnit VoidRayEnergyEqualorHigherThan12" Send="AnimPlay Attack Attack,06 PlayForever"/>
+        <On Terms="Effect.VoidRayStartingActorHooker.Stop; FromEffectTreeDescendant" Send="Destroy"/>
+        <Model value="VoidRayAttackBeam"/>
+    </CActorBeamSimple>
+    <CActorAction id="VoidRayAttackReachingBeam" parent="GenericAttackBase">
+        <On Terms="Effect.VoidRayStartingActorHooker.Start" Send="Create"/>
+        <On Terms="Effect.VoidRayStartingActorHooker.Stop" Send="Destroy"/>
+        <On Terms="Effect.PrismaticBeamMUx1.Start; At Effect; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <On Terms="Effect.PrismaticBeamMUx2.Start; At Effect; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <On Terms="Effect.PrismaticBeamMUx3.Start; At Effect; FromEffectTreeDescendant" Send="ActionDamage"/>
+        <On Terms="Effect.PrismaticBeamMUx1.Stop; At Effect; FromEffectTreeDescendant" Send="ActionDamagePhysics"/>
+        <On Terms="Effect.PrismaticBeamMUx2.Stop; At Effect; FromEffectTreeDescendant" Send="ActionDamagePhysics"/>
+        <On Terms="Effect.PrismaticBeamMUx3.Stop; At Effect; FromEffectTreeDescendant" Send="ActionDamagePhysics"/>
+        <LaunchAttachQuery Methods="Weapon 1"/>
+        <Beam value="VoidRayAttackBeamCCC"/>
+        <BeamScope value="Caster"/>
+        <ImpactSiteOps Ops="SOpAttachHarness SOpAttachVolumeNoVizEnhance SOpForwardLaunchGuide"/>
+        <ActionFlags index="AlignedImpactsAndDamages" value="1"/>
+        <ActionFlags index="LaunchForceSite" value="1"/>
+        <Lifetime value="-1.000000"/>
+    </CActorAction>
+    <CActorSiteOpForward id="CCCRaySOpForwardLaunch">
+        <HostForward>
+            <Subject value="_Selectable"/>
+            <Scope value="Outer"/>
+            <Actor value="Find"/>
+            <Effect value="VoidRayStartingActorHooker"/>
+        </HostForward>
+    </CActorSiteOpForward>
+    <CActorSound id="VoidRaySound1">
+        <On index="3" Terms="Effect.VoidRayMainChanneling.Start; ValidateEffect VoidRayEnergyLessThan6"/>
+        <On index="4" Terms="Effect.VoidRayStartingActorHooker.Stop"/>
+        <On Terms="Effect.VoidRayUpgrading.Stop" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="VoidRaySound2">
+        <Sound value="VoidRay_WeaponLoop2"/>
+        <On index="3" Terms="Effect.VoidRayMainChanneling.Start; ValidateEffect VoidRayEnergyPhase2"/>
+        <On index="4" Terms="Effect.VoidRayStartingActorHooker.Stop"/>
+        <On Terms="Effect.VoidRayUpgrading.Start" Send="StatusIncrement loop2"/>
+        <On Terms="Effect.VoidRayUpgrading.Stop; HasStatus loop2" Send="Destroy"/>
+    </CActorSound>
+    <CActorSound id="VoidRaySound3">
+        <On index="3" Terms="Effect.VoidRayMainChanneling.Start; ValidateEffect VoidRayEnergyEqualorHigherThan12"/>
+        <On index="4" Terms="Effect.VoidRayStartingActorHooker.Stop"/>
+    </CActorSound>
+    <CActorSound id="VoidRaySoundEnd">
+        <Sound value=""/>
+        <On Terms="WeaponStop.CCCsPrismaticBeam.AttackStop" Send="Create"/>
+    </CActorSound>
+    <CActorSound id="VoidRaySoundStart">
+        <Sound value=""/>
+        <On Terms="Effect.VoidRayStartingActorHooker.Start" Send="Create"/>
+    </CActorSound>
+    <CActorBeamSimple id="VoidRayBeamZ00" parent="ModelAnimationStyleContinuous">
+        <HostLaunchSiteOps Ops="SOpAttachCenter"/>
+        <HostImpactSiteOps Ops="SOpAttachWeapon"/>
+        <HostLaunch Subject="VoidRay"/>
+        <HostImpact Subject="VoidRay"/>
+        <Model value="VoidRayCenterBeam"/>
+        <Inherits index="BaseModelScale" value="1"/>
+        <Inherits index="CastShadows" value="1"/>
+        <Inherits index="CloakEffect" value="1"/>
+        <Inherits index="CreepEngulfment" value="1"/>
+        <Inherits index="Decal" value="1"/>
+        <Inherits index="ModelMaterials" value="1"/>
+        <Inherits index="Opacity" value="1"/>
+        <Inherits index="Scale" value="1"/>
+        <Inherits index="TeamColor" value="1"/>
+        <Inherits index="TimeScale" value="1"/>
+        <Inherits index="TintColor" value="1"/>
+        <Inherits index="Visibility" value="1"/>
+        <Inherits index="WarpGroup" value="1"/>
+        <Host Subject="VoidRay"/>
+    </CActorBeamSimple>
+    <CActorModel id="VoidRayAdditionZ01" parent="ModelAddition">
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="Behavior.VoidRayEnergyCounter.On" Send="Create"/>
+        <On Terms="Behavior.VoidRayEnergyCounter.Off" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpAttachWeapon03"/>
+        <Model value="VoidRayChargeBase"/>
+    </CActorModel>
+    <CActorModel id="VoidRayAdditionZ02" parent="ModelAddition">
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="Behavior.VoidRayChargePhase2.On" Send="Create"/>
+        <On Terms="Behavior.VoidRayEnergyCounter.Off; ValidateUnit VoidRayEnergyLessThan6" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpAttachWeapon05"/>
+        <Model value="VoidRayChargeBase"/>
+    </CActorModel>
+    <CActorModel id="VoidRayAdditionZ03" parent="ModelAddition">
+        <On Terms="AnimBracketState.*.AfterClosing; AnimName BSD" Send="Destroy"/>
+        <On Terms="Behavior.VoidRayChargePhase3.On" Send="Create"/>
+        <On Terms="Behavior.VoidRayEnergyCounter.Off; ValidateUnit VoidRayEnergyLessThan6" Send="AnimBracketStop BSD"/>
+        <HostSiteOps Ops="SOpAttachWeapon07"/>
+        <Model value="VoidRayChargeBase"/>
+    </CActorModel>
+    <CActorUnit id="WidowMine">
+        <On index="85" Terms="ActorCreation; ValidatePlayer HasDrillingClawsUpgrade"/>
+        <On index="86" Terms="Upgrade.DrillClaws.Add" Target="" Send="Create WidowMineDrillingClawsUpgrade"/>
+        <On Terms="Upgrade.DrillClaws.Remove" Target="WidowMineDrillingClawsUpgrade" Send="Destroy"/>
+    </CActorUnit>
+</Catalog>

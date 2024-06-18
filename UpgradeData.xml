@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Catalog>
+    <CUpgrade id="AdeptPiercingAttack">
+        <EffectArray index="0" Operation="Set" Reference="Weapon,Adept,Effect" Value="AdeptUpgradeLM"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+    </CUpgrade>
+    <CUpgrade id="AerialHomeostasis">
+        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <Icon value="Assets\Textures\btn-upgrade-zerg-evolveincreasedlocustlifetime.dds"/>
+        <Alert value="ResearchComplete"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <AffectedUnitArray value="SwarmHostMP"/>
+        <AffectedUnitArray value="LocustMP"/>
+        <EffectArray Operation="Set" Reference="Weapon,LocustMPFlyingSwoopWeapon,Options[Disabled]" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,LocustMPAerial,Options[Hidden]" Value="0"/>
+        <EffectArray Operation="Set" Reference="Weapon,LocustMPAerial,Options[Disabled]" Value="0"/>
+        <EffectArray Reference="Unit,LocustMP,Speed" Value="0.375000"/>
+        <EffectArray Reference="Unit,LocustMPFlying,Speed" Value="0.375000"/>
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="AmplifiedShielding">
+        <EffectArray index="0" Value="50"/>
+        <EffectArray index="1" Value="50"/>
+    </CUpgrade>
+    <CUpgrade id="AnabolicSynthesis">
+        <Flags index="UpgradeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="AntiCorrosionContainer">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-abathur-corrosivebilelarge.dds"/>
+        <Alert value="ResearchComplete"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <ScoreResult value="BuildOrder"/>
+        <AffectedUnitArray value="Ravager"/>
+        <AffectedUnitArray value="RavagerBurrowed"/>
+        <EffectArray Reference="Unit,Ravager,EnergyStart" Value="25"/>
+        <EffectArray Reference="Unit,RavagerBurrowed,EnergyStart" Value="25"/>
+        <EffectArray Reference="Abil,RavagerCorrosiveBile,Range[0]" Value="1"/>
+        <EffectArray Reference="Abil,RavagerCorrosiveBile,AutoCastRange" Value="1"/>
+        <ScoreAmount value="200"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierCarrierCapacity">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierLaunchSpeedUpgrade">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="CarrierLeashRangeUpgrade">
+        <Flags index="TechTreeCheat" value="0"/>
+    </CUpgrade>
+    <CUpgrade id="Charge">
+        <ScoreAmount value="400"/>
+        <EffectArray index="0" Value="0.500000"/>
+    </CUpgrade>
+    <CUpgrade id="ChitinousPlating">
+        <EffectArray index="0" Value="1"/>
+        <EffectArray index="1" Value="1"/>
+        <EffectArray index="2" Value="1"/>
+        <EffectArray index="3" Value="1"/>
+        <EffectArray Reference="Unit,Ultralisk,LifeStart" Value="100"/>
+        <EffectArray Reference="Unit,Ultralisk,LifeMax" Value="100"/>
+        <EffectArray Reference="Unit,UltraliskBurrowed,LifeStart" Value="100"/>
+        <EffectArray Reference="Unit,UltraliskBurrowed,LifeMax" Value="100"/>
+    </CUpgrade>
+    <CUpgrade id="CycloneRapidFireLaunchers">
+        <EffectArray index="0" Reference="Effect,LockOnFireSet,EffectArray[2]" Value="LockOnCPCCCKSSUpgraded"/>
+        <EffectArray index="1" Reference="Button,LockOn,AlertTooltip" Value="Button/Tooltip/LockOnRapidUpgraded"/>
+        <EffectArray index="2" Reference="Button,LockOn,Tooltip" Value="Button/Tooltip/LockOnRapidUpgraded"/>
+        <EffectArray index="3" removed="1"/>
+        <EffectArray index="4" removed="1"/>
+        <EffectArray index="5" removed="1"/>
+        <EffectArray index="6" removed="1"/>
+        <EffectArray index="7" removed="1"/>
+        <EffectArray index="8" removed="1"/>
+        <EffectArray index="9" removed="1"/>
+        <EffectArray index="10" removed="1"/>
+        <EffectArray index="11" removed="1"/>
+        <EffectArray index="12" removed="1"/>
+        <EffectArray index="13" removed="1"/>
+        <EffectArray index="14" removed="1"/>
+        <EffectArray index="15" removed="1"/>
+        <EffectArray index="16" removed="1"/>
+        <EffectArray index="17" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="DarkTemplarBlinkUpgrade">
+        <ScoreAmount value="400"/>
+    </CUpgrade>
+    <CUpgrade id="DiggingClaws">
+        <EffectArray index="0" Operation="Set" Reference="Unit,LurkerMP,Speed" Value="2.953100"/>
+        <EffectArray index="1" removed="1"/>
+        <EffectArray index="2" removed="1"/>
+        <EffectArray index="3" removed="1"/>
+        <EffectArray index="4" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="DrillClaws">
+        <EffectArray Operation="Subtract" Reference="Abil,WidowMineBurrow,InfoArray[0].RandomDelayMax" Value="0.250000"/>
+        <!--EffectArray Operation="Set" Reference="Behavior,WidowMineBurrowedCloakingBehavior,Modification.StateFlags[SuppressCloak]" Value="0"/-->
+    </CUpgrade>
+    <CUpgrade id="EvolveMuscularAugments">
+        <EffectArray index="1" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ExtendedThermalLance">
+        <ScoreAmount value="400"/>
+    </CUpgrade>
+    <CUpgrade id="GraviticDrive">
+        <EffectArray index="0" Operation="Set" Value="3.375000"/>
+        <EffectArray Reference="Abil,WarpPrismTransport,Range" Value="2"/>
+    </CUpgrade>
+    <CUpgrade id="HatcheryCapacity">
+        <Flags index="TechTreeCheat" value="1"/>
+        <Icon value="Assets\Textures\btn-ability-zerg-darkswarm.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Zerg"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Behavior,SpawnLarva,InfoArray[0].MaxCount" Value="17"/>
+        <EditorCategories value="Race:Zerg,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Hatchery"/>
+        <AffectedUnitArray value="Lair"/>
+        <AffectedUnitArray value="Hive"/>
+    </CUpgrade>
+    <CUpgrade id="LiberatorAGRangeUpgrade">
+        <Race value="Terr"/>
+        <!--EffectArray Reference="Unit,LiberatorAG,Sight" Value="4"/-->
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+    </CUpgrade>
+    <CUpgrade id="LurkerRange">
+        <ScoreAmount value="200"/>
+    </CUpgrade>
+    <CUpgrade id="ObserverGraviticBooster"/>
+    <CUpgrade id="SiegeTankRangeIncrease">
+        <Icon value="Assets\Textures\btn-upgrade-swann-vehiclerangeincrease.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Reference="Weapon,CrucioShockCannon,Range" Value="2"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="SiegeTankSieged"/>
+        <AffectedUnitArray value="SiegeTank"/>
+        <AffectedUnitArray value="SiegeTankACGluescreenDummy"/>
+        <AffectedUnitArray value="SiegeTankSkinPreview"/>
+    </CUpgrade>
+    <CUpgrade id="MedivacIncreaseSpeedBoost">
+        <EffectArray index="0" Operation="Add" Reference="Behavior,MedivacSpeedBoost,Duration" Value="2.000000"/>
+        <EffectArray index="1" removed="1"/>
+        <EffectArray index="2" removed="1"/>
+        <Flags index="UpgradeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="PhoenixRangeUpgrade">
+        <ScoreAmount value="200"/>
+        <EffectArray index="0" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirWeaponsLevel1">
+        <EffectArray index="20" Value="5"/>
+        <EffectArray index="32" Value="5"/>
+        <EffectArray index="35" Operation="Set" Reference="Weapon,VoidRaySwarmDisplayDummy,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel1.dds"/>
+        <EffectArray index="36" Operation="Add" Reference="Weapon,VoidRaySwarmDisplayDummy,Level" Value="1"/>
+        <EffectArray index="37" Reference="Effect,OracleWeaponDamage,Amount"/>
+        <EffectArray Reference="Effect,OracleWeaponDamage,AttributeBonus[Light]" Value="1"/>
+        <EffectArray Reference="Weapon,OracleDisplayDummy,Level" Value="1"/>
+        <EffectArray Reference="Weapon,Oracle,Level" Value="1"/>
+        <EffectArray Reference="Weapon,CCCsPrismaticBeam,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,CCCsPrismaticBeam,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel1.dds"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase0,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase1,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase2,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase3,Amount" Value="1"/>
+        <AffectedUnitArray value="Oracle"/>
+        <AffectedUnitArray value="Tempest"/>
+        <AffectedUnitArray value="Carrier"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirWeaponsLevel2">
+        <EffectArray index="20" Value="5"/>
+        <EffectArray index="32" Value="5"/>
+        <EffectArray index="35" Operation="Set" Reference="Weapon,VoidRaySwarmDisplayDummy,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel2.dds"/>
+        <EffectArray index="36" Operation="Add" Reference="Weapon,VoidRaySwarmDisplayDummy,Level" Value="1"/>
+        <EffectArray index="37" Reference="Effect,OracleWeaponDamage,Amount"/>
+        <EffectArray Reference="Effect,OracleWeaponDamage,AttributeBonus[Light]" Value="1"/>
+        <EffectArray Reference="Weapon,OracleDisplayDummy,Level" Value="1"/>
+        <EffectArray Reference="Weapon,Oracle,Level" Value="1"/>
+        <EffectArray Reference="Weapon,CCCsPrismaticBeam,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,CCCsPrismaticBeam,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel2.dds"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase0,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase1,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase2,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase3,Amount" Value="1"/>
+        <AffectedUnitArray value="Oracle"/>
+        <AffectedUnitArray value="Tempest"/>
+        <AffectedUnitArray value="Carrier"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossAirWeaponsLevel3">
+        <EffectArray index="20" Value="5"/>
+        <EffectArray index="32" Value="5"/>
+        <EffectArray index="35" Operation="Set" Reference="Weapon,VoidRaySwarmDisplayDummy,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel3.dds"/>
+        <EffectArray index="36" Operation="Add" Reference="Weapon,VoidRaySwarmDisplayDummy,Level" Value="1"/>
+        <EffectArray index="37" Reference="Effect,OracleWeaponDamage,Amount"/>
+        <EffectArray Reference="Effect,OracleWeaponDamage,AttributeBonus[Light]" Value="1"/>
+        <EffectArray Reference="Weapon,OracleDisplayDummy,Level" Value="1"/>
+        <EffectArray Reference="Weapon,Oracle,Level" Value="1"/>
+        <EffectArray Reference="Weapon,CCCsPrismaticBeam,Level" Value="1"/>
+        <EffectArray Operation="Set" Reference="Weapon,CCCsPrismaticBeam,Icon" Value="Assets\Textures\btn-upgrade-protoss-airweaponslevel3.dds"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase0,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase1,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase2,Amount" Value="1"/>
+        <EffectArray Reference="Effect,PrismaticBeamDamagePhase3,Amount" Value="1"/>
+        <AffectedUnitArray value="Oracle"/>
+        <AffectedUnitArray value="Tempest"/>
+        <AffectedUnitArray value="Carrier"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel1">
+        <EffectArray index="14" Value="2"/>
+        <EffectArray index="23" Value="2"/>
+        <EffectArray index="31" Value="2"/>
+        <EffectArray index="32" Operation="Subtract" Reference="Effect,AdeptDamage,AttributeBonus[Armored]"/>
+        <EffectArray index="36" Reference="Effect,HighTemplarWeaponDamage,Amount"/>
+        <EffectArray index="37" Operation="Set" Reference="Weapon,HighTemplarWeapon,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="38" Reference="Weapon,HighTemplarWeapon,Level"/>
+        <EffectArray index="39" Operation="Add" Reference="Effect,ParticleDisruptorsU,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray index="40" Operation="Set" Reference="Weapon,DisruptionBeamDisplayDummy,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel1.dds"/>
+        <EffectArray index="41" Reference="Weapon,DisruptionBeamDisplayDummy,Level"/>
+        <EffectArray index="42" removed="1"/>
+        <EffectArray index="43" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel2">
+        <EffectArray index="14" Value="2"/>
+        <EffectArray index="23" Value="2"/>
+        <EffectArray index="31" Value="2"/>
+        <EffectArray index="32" Operation="Subtract" Reference="Effect,AdeptDamage,AttributeBonus[Armored]"/>
+        <EffectArray index="36" Reference="Effect,HighTemplarWeaponDamage,Amount"/>
+        <EffectArray index="37" Operation="Set" Reference="Weapon,HighTemplarWeapon,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel2.dds"/>
+        <EffectArray index="38" Reference="Weapon,HighTemplarWeapon,Level"/>
+        <EffectArray index="39" Operation="Add" Reference="Effect,ParticleDisruptorsU,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray index="40" Operation="Set" Reference="Weapon,DisruptionBeamDisplayDummy,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel2.dds"/>
+        <EffectArray index="41" Reference="Weapon,DisruptionBeamDisplayDummy,Level"/>
+        <EffectArray index="42" removed="1"/>
+        <EffectArray index="43" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="ProtossGroundWeaponsLevel3">
+        <EffectArray index="14" Value="2"/>
+        <EffectArray index="23" Value="2"/>
+        <EffectArray index="31" Value="2"/>
+        <EffectArray index="32" Operation="Subtract" Reference="Effect,AdeptDamage,AttributeBonus[Armored]"/>
+        <EffectArray index="36" Reference="Effect,HighTemplarWeaponDamage,Amount"/>
+        <EffectArray index="37" Operation="Set" Reference="Weapon,HighTemplarWeapon,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel3.dds"/>
+        <EffectArray index="38" Reference="Weapon,HighTemplarWeapon,Level"/>
+        <EffectArray index="39" Operation="Add" Reference="Effect,ParticleDisruptorsU,AttributeBonus[Armored]" Value="1"/>
+        <EffectArray index="40" Operation="Set" Reference="Weapon,DisruptionBeamDisplayDummy,Icon" Value="Assets\Textures\btn-upgrade-protoss-groundweaponslevel3.dds"/>
+        <EffectArray index="41" Reference="Weapon,DisruptionBeamDisplayDummy,Level"/>
+        <EffectArray index="42" removed="1"/>
+        <EffectArray index="43" removed="1"/>
+    </CUpgrade>
+    <CUpgrade id="SensorArray">
+        <Icon value="Assets\Textures\btn-ability-zeratul-observer-sensorarray.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Prot"/>
+        <ScoreAmount value="200"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Observer"/>
+        <AffectedUnitArray value="ObserverSiegeMode"/>
+        <EffectArray Reference="Unit,Observer,Sight" Value="2"/>
+        <EffectArray Reference="Unit,ObserverSiegeMode,Sight" Value="2"/>
+        <EffectArray Reference="Behavior,DetectorLaterToBe13,Modification.Detect" Value="2"/>
+        <Flags index="TechTreeCheat" value="1"/>
+    </CUpgrade>
+    <CUpgrade id="SmartServos">
+        <EffectArray index="0" Reference="Abil,MorphToHellionTank,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray index="1" Reference="Abil,MorphToHellionTank,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.670000"/>
+        <EffectArray index="2" Reference="Abil,MorphToHellionTank,InfoArray[0].SectionArray[Collide].DurationArray[Delay]" Value="2.000000"/>
+        <EffectArray index="3" Reference="Abil,MorphToHellionTank,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray index="4" Reference="Abil,MorphToHellionTank,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="1.670000"/>
+        <EffectArray index="5" Reference="Abil,MorphToHellion,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray index="6" Reference="Abil,MorphToHellion,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.670000"/>
+        <EffectArray index="7" Operation="Subtract" Reference="Abil,MorphToHellion,InfoArray[0].SectionArray[Collide].DurationArray[Delay]" Value="2.000000"/>
+        <EffectArray index="8" Reference="Abil,MorphToHellion,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.330000"/>
+        <EffectArray index="9" Reference="Abil,MorphToHellion,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="1.670000"/>
+        <EffectArray index="10" Reference="Abil,ThorAPMode,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="1.500000"/>
+        <EffectArray index="11" Reference="Abil,ThorAPMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.500000"/>
+        <EffectArray index="12" Reference="Abil,ThorAPMode,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="1.500000"/>
+        <EffectArray index="13" Reference="Abil,ThorNormalMode,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="1.500000"/>
+        <EffectArray index="14" Reference="Abil,ThorNormalMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.500000"/>
+        <EffectArray index="15" Reference="Abil,ThorNormalMode,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="1.500000"/>
+        <EffectArray index="16" Reference="Abil,MorphToHellionTank,InfoArray[0].RandomDelayMax" Value="0.250000"/>
+        <EffectArray index="17" Reference="Abil,MorphToHellion,InfoArray[0].RandomDelayMax" Value="0.250000"/>
+        <EffectArray index="18" Reference="Abil,ThorAPMode,InfoArray[0].RandomDelayMax" Value="0.250000"/>
+        <EffectArray index="19" Reference="Abil,ThorNormalMode,InfoArray[0].RandomDelayMax" Value="0.250000"/>
+        <EffectArray index="20" Reference="Abil,SiegeMode,InfoArray[0].RandomDelayMax" Value="0.250000"/>
+        <EffectArray index="21" Reference="Abil,SiegeMode,InfoArray[0].SectionArray[Mover].DurationArray[Delay]" Value="0.250000"/>
+        <EffectArray index="22" Reference="Abil,SiegeMode,InfoArray[0].SectionArray[Abils].DurationArray[Delay]" Value="0.250000"/>
+        <EffectArray index="23" Reference="Abil,SiegeMode,InfoArray[0].SectionArray[Actor].DurationArray[Delay]" Value="0.250000"/>
+        <EffectArray index="24" Reference="Abil,SiegeMode,InfoArray[0].SectionArray[Stats].DurationArray[Delay]" Value="0.250000"/>
+        <EffectArray index="25" Reference="Abil,SiegeMode,InfoArray[0].SectionArray[Facing].DurationArray[Duration]"/>
+        <EffectArray index="26" Reference="Abil,SiegeMode,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.770900"/>
+        <EffectArray index="27" Reference="Abil,SiegeMode,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="1.770900"/>
+        <EffectArray index="28" Reference="Abil,Unsiege,InfoArray[0].RandomDelayMax"/>
+        <EffectArray Operation="Subtract" Reference="Abil,Unsiege,InfoArray[0].SectionArray[Actor].DurationArray[Duration]" Value="1.770900"/>
+        <EffectArray Operation="Subtract" Reference="Abil,Unsiege,InfoArray[0].SectionArray[Stats].DurationArray[Duration]" Value="1.770900"/>
+        <AffectedUnitArray index="2" value="ThorAP"/>
+        <AffectedUnitArray index="3" value="Thor"/>
+        <AffectedUnitArray index="4" value="SiegeTank"/>
+        <AffectedUnitArray index="5" value="SiegeTankSieged"/>
+    </CUpgrade>
+    <CUpgrade id="TacticalJump">
+        <Icon value="Assets\Textures\btn-ability-terran-warpjump.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EditorCategories value="Race:Terran,UpgradeType:SpellResearch"/>
+        <AffectedUnitArray value="Battlecruiser"/>
+    </CUpgrade>
+    <CUpgrade id="TempestGroundAttackUpgrade">
+        <EffectArray index="0" Value="30"/>
+        <EffectArray Reference="Weapon,TempestGround,Level" Value="1"/>
+        <EditorCategories value="Race:Protoss,UpgradeType:AttackBonus"/>
+        <Icon value="Assets\Textures\btn-upgrade-protoss-fenix-disruptorpurificationecho.dds"/>
+    </CUpgrade>
+    <CUpgrade id="TerranBuildingArmor">
+        <EffectArray index="58" Reference="Unit,AutoTurret,LifeArmor" Value="2.000000"/>
+        <EffectArray index="59" Reference="Unit,AutoTurret,LifeArmorLevel"/>
+        <EffectArray index="60" Reference="Unit,PointDefenseDrone,LifeArmorLevel"/>
+        <EffectArray index="61" Reference="Unit,PointDefenseDrone,LifeArmor"/>
+        <AffectedUnitArray index="29" value="AutoTurret"/>
+        <AffectedUnitArray index="30" value="PointDefenseDrone"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsLevel1">
+        <EffectArray index="21" Operation="Set" Reference="Weapon,LiberatorAGMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel1.dds"/>
+        <EffectArray Reference="Weapon,LiberatorAGMissileLaunchers,Level" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsLevel2">
+        <EffectArray index="21" Operation="Set" Reference="Weapon,LiberatorAGMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel2.dds"/>
+        <EffectArray Reference="Weapon,LiberatorAGMissileLaunchers,Level" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranShipWeaponsLevel3">
+        <EffectArray index="21" Operation="Set" Reference="Weapon,LiberatorAGMissileLaunchers,Icon" Value="Assets\Textures\btn-upgrade-terran-shipweaponslevel3.dds"/>
+        <EffectArray Reference="Weapon,LiberatorAGMissileLaunchers,Level" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel1">
+        <EffectArray index="37" Value="1"/>
+        <AffectedUnitArray value="Cyclone"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel2">
+        <EffectArray index="37" Value="1"/>
+        <AffectedUnitArray value="Cyclone"/>
+    </CUpgrade>
+    <CUpgrade id="TerranVehicleWeaponsLevel3">
+        <EffectArray index="37" Value="1"/>
+        <AffectedUnitArray value="Cyclone"/>
+    </CUpgrade>
+    <CUpgrade id="VoidRaySpeedUpgrade">
+        <EffectArray index="0" Value="3.125000"/>
+        <EffectArray index="1" Value="3.000000"/>
+        <EffectArray index="2" Value="0.75"/>
+        <EffectArray index="3" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMissileWeaponsLevel1">
+        <EffectArray Operation="Set" Reference="Weapon,LocustMPAerial,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
+        <EffectArray Reference="Weapon,LocustMPAerial,Level" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMissileWeaponsLevel2">
+        <EffectArray Operation="Set" Reference="Weapon,LocustMPAerial,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level2.dds"/>
+        <EffectArray Reference="Weapon,LocustMPAerial,Level" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMissileWeaponsLevel3">
+        <EffectArray Operation="Set" Reference="Weapon,LocustMPAerial,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level3.dds"/>
+        <EffectArray Reference="Weapon,LocustMPAerial,Level" Value="1"/>
+    </CUpgrade>
+    <CUpgrade id="advancedHealingAI">
+        <Icon value="Assets\Textures\btn-ability-mengsk-medivac-doublehealbeam.dds"/>
+        <Alert value="ResearchComplete"/>
+        <Race value="Terr"/>
+        <ScoreAmount value="400"/>
+        <ScoreResult value="BuildOrder"/>
+        <EffectArray Operation="Set" Reference="Button,Heal,AlertTooltip" Value="Button/Tooltip/advancedHealing"/>
+        <EffectArray Operation="Set" Reference="Button,Heal,Tooltip" Value="Button/Tooltip/advancedHealing"/>
+        <EffectArray Operation="Set" Reference="Button,Heal,AlertIcon" Value="Assets\Textures\btn-ability-mengsk-medivac-doublehealbeam.dds"/>
+        <EffectArray Operation="Set" Reference="Button,Heal,Icon" Value="Assets\Textures\btn-ability-mengsk-medivac-doublehealbeam.dds"/>
+        <EditorCategories value="Race:Terran,UpgradeType:Talents"/>
+        <AffectedUnitArray value="Medivac"/>
+    </CUpgrade>
+    <CUpgrade id="hydraliskspeed">
+        <EffectArray index="1" Operation="Add" Reference="Weapon,NeedleSpines,MinScanRange" Value="1"/>
+        <EffectArray index="2" removed="1"/>
+        <AffectedUnitArray index="0" removed="1"/>
+        <AffectedUnitArray index="1" removed="1"/>
+    </CUpgrade>
+</Catalog>

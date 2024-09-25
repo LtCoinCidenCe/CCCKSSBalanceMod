@@ -78,6 +78,9 @@
         <Flags index="Smart" value="1"/>
         <TargetFilters value="Visible;Self,Enemy,Structure,Missile,Uncommandable,UnderConstruction,Dead,Hidden,Invulnerable"/>
     </CAbilEffectTarget>
+    <CAbilEffectTarget id="FungalGrowth">
+        <Range index="0" value="10"/>
+    </CAbilEffectTarget>
     <CAbilTrain id="GatewayTrain"/>
     <CAbilResearch id="GhostAcademyResearch"/>
     <CAbilResearch id="HydraliskDenResearch">
@@ -213,7 +216,7 @@
         </InfoArray>
     </CAbilResearch>
     <CAbilTrain id="FactoryTrain">
-        <InfoArray index="Train8">
+        <InfoArray index="Train8" Time="35">
             <Button Requirements=""/>
         </InfoArray>
         <InfoArray index="Train10" Time="45">
@@ -498,8 +501,8 @@
         <UnloadCargoEffect value="PurificationNovaMorphBackFromTransport"/-->
     </CAbilTransport>
     <CAbilEffectTarget id="WidowMineAttack">
-        <PrepEffect index="0" value="WidowMineTargetingBeamDummy"/>
         <PrepEffect index="1" removed="1"/>
+        <CancelEffect index="Prep" value="WidowMineTargetTintRemoveBehavior"/>
     </CAbilEffectTarget>
     <CAbilMorph id="WidowMineBurrow"/>
     <CAbilMorph id="WidowMineUnburrow">

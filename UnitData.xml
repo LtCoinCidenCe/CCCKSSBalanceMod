@@ -73,6 +73,7 @@
         <CostResource index="Vespene" value="75"/>
         <ScoreMake value="200"/>
         <ScoreKill value="200"/>
+        <RepairTime value="35"/>
     </CUnit>
     <CUnit id="Disruptor">
         <LifeStart value="150"/>
@@ -269,6 +270,7 @@
         <LifeStart value="150"/>
         <LifeMax value="150"/>
         <Speed value="2.9531"/>
+        <LifeArmor value="1"/>
     </CUnit>
     <CUnit id="LiberatorAG">
         <LifeStart value="150"/>
@@ -276,6 +278,7 @@
         <WeaponArray Link="LiberatorAGMissileLaunchers"/>
         <BehaviorArray Link="LiberatorStartedMorphingtoDefenderMode"/>
         <GlossaryPriority value="189"/>
+        <LifeArmor value="1"/>
     </CUnit>
     <CUnit id="LocustMP">
         <LifeStart value="65"/>
@@ -287,11 +290,14 @@
         <LifeMax value="65"/>
     </CUnit>
     <CUnit id="LurkerDenMP">
-        <CostResource index="Minerals" value="200"/>
+        <CostResource index="Minerals" value="100"/>
+        <CostResource index="Vespene" value="50"/>
         <CardLayouts index="0">
             <LayoutButtons index="2" Column="1"/>
             <LayoutButtons index="3" Column="0"/>
         </CardLayouts>
+        <ScoreMake value="100"/>
+        <ScoreKill value="150"/>
     </CUnit>
     <CUnit id="LurkerMP">
         <Facing value="0"/>

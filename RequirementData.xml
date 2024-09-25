@@ -55,6 +55,7 @@
     </CRequirement>
     <CRequirement id="NoUseAdaptiveTalons">
         <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUpgradeBurrowCompleteOnly2068259705TechTreeCheat"/>
         <NodeArray index="Show" Link="NotCountUpgradeDiggingClawsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="NoUseAdvancedHealingAI">
@@ -67,6 +68,7 @@
     </CRequirement>
     <CRequirement id="UseAdaptiveTalons">
         <EditorCategories value="Race:Zerg,TechType:Unit"/>
+        <NodeArray index="Use" Link="CountUpgradeBurrowCompleteOnly2068259705TechTreeCheat"/>
         <NodeArray index="Show" Link="CountUpgradeDiggingClawsCompleteOnly"/>
     </CRequirement>
     <CRequirement id="UseAdvancedHealingAI">

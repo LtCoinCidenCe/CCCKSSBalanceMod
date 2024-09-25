@@ -604,4 +604,16 @@
         <On index="86" Terms="Upgrade.DrillClaws.Add" Target="" Send="Create WidowMineDrillingClawsUpgrade"/>
         <On Terms="Upgrade.DrillClaws.Remove" Target="WidowMineDrillingClawsUpgrade" Send="Destroy"/>
     </CActorUnit>
+    <CActorSimple id="WidowMineTargetTint">
+        <On Terms="Behavior.WidowMineTargeted.On" Send="Create"/>
+        <On Terms="ActorCreation" Target="_Unit" Send="SetTintColor 255,138,138 0.000000 OneShot WidowMineTarget"/>
+        <On Terms="Behavior.WidowMineTargeted.Off" Target="_Unit" Send="ClearTintColor 0.000000 WidowMineTarget"/>
+        <On Terms="Behavior.WidowMineTargeted.Off" Send="Destroy"/>
+    </CActorSimple>
+    <CActorBeamSimple id="WidowMineTargetingBeam">
+        <On index="3" Terms="Effect.WidowMineTargetTintApplyBehavior.Start; At Caster"/>
+        <On Terms="ActorCreation" Send="SetTintColorBlendPair 255,255,255 {221,0,0 1.500000} 1.350000"/>
+        <On Terms="ActorCreation" Send="SetScale 2.000000 3.000000"/>
+        <Scale value="0.400000"/>
+    </CActorBeamSimple>
 </Catalog>

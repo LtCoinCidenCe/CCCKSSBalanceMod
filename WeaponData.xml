@@ -115,8 +115,8 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="ParasiteSpore">
         <Period value="1.65"/>
-        <DamagePoint value="0.75"/>
-        <RangeSlop value="3"/>
+        <DamagePoint value="0.375"/>
+        <RangeSlop value="2"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ParticleDisruptors">
         <MinScanRange value="6"/>
@@ -129,6 +129,9 @@
     </CWeaponLegacy>
     <CWeaponLegacy id="RavagerWeapon">
         <MinScanRange value="6"/>
+    </CWeaponLegacy>
+    <CWeaponLegacy id="Spinesdisabled">
+        <Range value="7"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="Talons">
         <MinScanRange value="3.5"/>
@@ -158,10 +161,11 @@
         <MinScanRange value="6"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="TyphoonMissilePod">
-        <MinScanRange value="5"/>
         <Period value="0.14"/>
         <RandomDelayMin value="0"/>
         <RandomDelayMax value="0"/>
+        <Backswing value="0.05"/>
+        <DamagePoint value="0.125"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="MothershipWeaponPurify" parent="MothershipCoreWeapon">
         <Name value="Weapon/Name/MothershipWeaponPurify"/>

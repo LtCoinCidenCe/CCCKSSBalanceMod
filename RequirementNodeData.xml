@@ -2,7 +2,6 @@
 <Catalog>
     <CRequirementCountBehavior id="CountBehaviorRavenChargeInitialSelfCompleteOnlyAtUnit">
         <Flags index="TechTreeCheat" value="0"/>
-        <Tooltip value="RequirementNode/Tooltip/##id##"/>
         <Count Link="RavenChargeInitialSelf" State="CompleteOnlyAtUnit"/>
     </CRequirementCountBehavior>
     <CRequirementCountUnit id="CountUnitHiveQueuedOrBetterTechTreeCheat">
@@ -19,6 +18,9 @@
     <CRequirementCountUpgrade id="CountUpgradeAntiCorrosionContainerQueuedOrBetter">
         <Flags index="TechTreeCheat" value="0"/>
         <Count Link="AntiCorrosionContainer" State="QueuedOrBetter"/>
+    </CRequirementCountUpgrade>
+    <CRequirementCountUpgrade id="CountUpgradeBurrowCompleteOnly2068259705TechTreeCheat">
+        <Count Link="Burrow" State="CompleteOnly"/>
     </CRequirementCountUpgrade>
     <CRequirementCountUpgrade id="CountUpgradeDiggingClawsCompleteOnly">
         <Flags index="TechTreeCheat" value="0"/>

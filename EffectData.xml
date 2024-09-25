@@ -52,6 +52,10 @@
         <Flags index="UseDuration" value="1"/>
         <Duration value="0.125"/>
     </CEffectApplyBehavior>
+    <CEffectDamage id="LiberatorMissileDamage">
+        <AttributeBonus index="Mechanical" value="2"/>
+        <Amount value="4"/>
+    </CEffectDamage>
     <CEffectCreateHealer id="MedivacHeal2">
         <EditorCategories value="Race:Terran"/>
         <DrainVital value="Energy"/>
@@ -700,4 +704,13 @@
         <ValidatorArray index="0" removed="1"/>
         <ValidatorArray index="1" removed="1"/>
     </CEffectDamage>
+    <CEffectApplyBehavior id="WidowMineTargetTintApplyBehavior">
+        <EditorCategories value="Race:Terran"/>
+        <Behavior value="WidowMineTargeted"/>
+    </CEffectApplyBehavior>
+    <CEffectRemoveBehavior id="WidowMineTargetTintRemoveBehavior">
+        <EditorCategories value="Race:Terran"/>
+        <BehaviorLink value="WidowMineTargeted"/>
+        <Count value="1"/>
+    </CEffectRemoveBehavior>
 </Catalog>

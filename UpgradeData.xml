@@ -352,6 +352,15 @@
         <EffectArray index="2" Value="0.75"/>
         <EffectArray index="3" Value="1"/>
     </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel1">
+        <EffectArray index="3" Value="4"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel2">
+        <EffectArray index="3" Value="4"/>
+    </CUpgrade>
+    <CUpgrade id="ZergMeleeWeaponsLevel3">
+        <EffectArray index="3" Value="4"/>
+    </CUpgrade>
     <CUpgrade id="ZergMissileWeaponsLevel1">
         <EffectArray Operation="Set" Reference="Weapon,LocustMPAerial,Icon" Value="Assets\Textures\btn-upgrade-zerg-missileattacks-level1.dds"/>
         <EffectArray Reference="Weapon,LocustMPAerial,Level" Value="1"/>

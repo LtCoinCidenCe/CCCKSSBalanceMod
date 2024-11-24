@@ -129,7 +129,6 @@
         <TargetFilters value="Biological,Visible;Self,Enemy,Structure,Missile,Uncommandable,Stasis,Dead,Hidden,Invulnerable"/>
         <TargetSorts RequestCount="1">
             <SortArray value="TSAlliancePassive"/>
-            <SortArray value="TSLifeFraction"/>
             <SortArray value="TSDistance"/>
         </TargetSorts>
         <Range value="4"/>

@@ -28,6 +28,7 @@
         </CardLayouts>
         <ScoreMake value="500"/>
         <ScoreKill value="500"/>
+        <SubgroupPriority value="55"/>
     </CUnit>
     <CUnit id="Colossus">
         <GlossaryStrongArray index="0" value="Marauder"/>
@@ -599,6 +600,7 @@
             <LayoutButtons index="6" removed="1"/>
         </CardLayouts>
         <EquipmentArray index="0" removed="1"/>
+        <SubgroupPriority value="51"/>
     </CUnit>
     <CUnit id="WarpPrism">
         <CostResource index="Minerals" value="200"/>

@@ -139,11 +139,15 @@
     <CWeaponLegacy id="Tempest">
         <Range value="13"/>
         <Effect value="TempestAttackAirSet"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Period value="3"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="TempestGround">
         <Range value="13"/>
         <MinScanRange value="5"/>
         <Effect value="TempestAttackGroundSet"/>
+        <Options index="DisplayCooldown" value="1"/>
+        <Period value="3"/>
     </CWeaponLegacy>
     <CWeaponLegacy id="ThermalLances">
         <MinScanRange value="5"/>

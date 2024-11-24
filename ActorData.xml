@@ -306,6 +306,7 @@
         <Remove index="1" removed="1"/>
     </CActorModel>
     <CActorModel id="StormSphereAttachment">
+        <On index="5" Send="AnimPlay Rearm Stand,Work,Start 0 0.000000 0.000000 2.500000 AsDuration"/>
         <On Terms="ActorCreation; ValidatePlayer TempestGroundAttackUpgraded" Send="SetTintColor {255,60,0 4.000000}"/>
         <On Terms="Signal.*.GAU" Send="SetTintColor {255,60,0 4.000000} 1.000000"/>
         <On Terms="ActorCreation" Send="SetCastShadows"/>
